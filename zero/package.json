@@ -1,0 +1,20 @@
+{
+  "name": "realtime-db-benchmark-zero",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "query-api": "tsx src/query-server.ts",
+    "subscriber": "tsx src/subscriber.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.0",
+    "@rocicorp/zero": "1.8.0",
+    "hono": "^4.7.0",
+    "ws": "^8.18.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

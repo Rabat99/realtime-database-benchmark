@@ -1,0 +1,123 @@
+services:
+  postgres:
+    cpuset: "${PG_CPUS:-0}"
+    image: ${POSTGRES_IMAGE:-postgres:16}
+    command:
+      - postgres
+      - -c
+      - wal_level=logical
+      - -c
+      - max_replication_slots=16
+      - -c
+      - max_wal_senders=16
+      - -c
+      - max_connections=200
+      - -c
+      - shared_buffers=${PG_SHARED_BUFFERS:-1GB}
+      - -c
+      - work_mem=${PG_WORK_MEM:-16MB}
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB:-postgres}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - benchmark_pgdata:/var/lib/postgresql/data
+      - ../shared:/bench:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-postgres}"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+
+  postgres-meta:
+    cpuset: "${ZERO_CPUS:-1}"
+    image: ${POSTGRES_IMAGE:-postgres:16}
+    command:
+      - postgres
+      - -c
+      - max_connections=200
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: zero_cvr
+    ports:
+      - "${POSTGRES_META_PORT:-5433}:5432"
+    volumes:
+      - zero_metadata:/var/lib/postgresql/data
+      - ../shared/init_zero_meta.sql:/docker-entrypoint-initdb.d/10-init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d zero_cvr"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+
+  zero-query-api:
+    cpuset: "${ZERO_CPUS:-1}"
+    build:
+      context: ../zero
+    environment:
+      PORT: "3000"
+    expose:
+      - "3000"
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:3000/healthz').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))",
+        ]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+
+  zero-cache:
+    cpuset: "${ZERO_CPUS:-1}"
+    image: rocicorp/zero:1.8.0
+    depends_on:
+      postgres:
+        condition: service_healthy
+      postgres-meta:
+        condition: service_healthy
+      zero-query-api:
+        condition: service_healthy
+    stop_grace_period: 10m
+    ports:
+      - "${ZERO_PORT:-4848}:4848"
+    environment:
+      ZERO_UPSTREAM_DB: postgres://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-postgres}
+      ZERO_CVR_DB: postgres://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres-meta:5432/zero_cvr
+      ZERO_CHANGE_DB: postgres://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres-meta:5432/zero_change
+      ZERO_REPLICA_FILE: /data/replica.db
+      ZERO_ADMIN_PASSWORD: ${ZERO_ADMIN_PASSWORD:-benchmarksecret}
+      ZERO_QUERY_URL: http://zero-query-api:3000/api/zero/query
+      ZERO_ENABLE_CRUD_MUTATIONS: "false"
+      ZERO_LOG_LEVEL: ${ZERO_LOG_LEVEL:-info}
+      DO_NOT_TRACK: "1"
+    volumes:
+      - zero_data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:4848/keepalive"]
+      interval: 5s
+      timeout: 3s
+      retries: 60
+      start_period: 10m
+    restart: unless-stopped
+
+  zero-client:
+    cpuset: "${HARNESS_CPUS:-2,3}"
+    build:
+      context: ../zero
+    profiles: ["tools"]
+    environment:
+      ZERO_CACHE_URL: http://zero-cache:4848
+    entrypoint: []
+    command: ["npm", "run", "subscriber", "--", "--help"]
+
+volumes:
+  benchmark_pgdata:
+    name: realtime_benchmark_pgdata
+  zero_metadata:
+  zero_data:

@@ -1,0 +1,71 @@
+{
+  "system": "zero",
+  "ts": "2026-08-17T23:06:39",
+  "harness": "expr_core v3 (PostgreSQL oracle + progress barrier + empirical capability probe)",
+  "semantic_scope": "initial_result_plus_continuous_result_maintenance",
+  "negative_probe_method": "progress_barrier",
+  "topology": {
+    "topic": 1,
+    "other_topic": 2,
+    "user_a": 1,
+    "user_b": 2,
+    "user_off": 7,
+    "needle": "gamma",
+    "miss_word": "omega",
+    "limit": 10,
+    "offset": 5
+  },
+  "text_filter_note": "e8_text uses ILIKE substring/pattern matching; it is not PostgreSQL full-text search",
+  "classes": {
+    "e4_offset": {
+      "label": "Sorted Query + Limit + Offset",
+      "verdict": "not_expressible",
+      "probes": [
+        {
+          "cls": "e4_offset",
+          "probe": "T0 Formulierbarkeit",
+          "verdict": "na",
+          "state_proof": false,
+          "detail": "Registrierungsversuch ergab: nicht formulierbar: OFFSET: ZQL query object has no offset() method in this installed version",
+          "latency_s": null
+        }
+      ],
+      "state_proofs_passed": 0,
+      "median_converge_s": null
+    },
+    "e6_count": {
+      "label": "Aggregation COUNT",
+      "verdict": "not_expressible",
+      "probes": [
+        {
+          "cls": "e6_count",
+          "probe": "T0 Formulierbarkeit",
+          "verdict": "na",
+          "state_proof": false,
+          "detail": "Registrierungsversuch ergab: nicht formulierbar: COUNT: ZQL query object has no count() method in this installed version",
+          "latency_s": null
+        }
+      ],
+      "state_proofs_passed": 0,
+      "median_converge_s": null
+    },
+    "e7_max": {
+      "label": "Aggregation MAX",
+      "verdict": "not_expressible",
+      "probes": [
+        {
+          "cls": "e7_max",
+          "probe": "T0 Formulierbarkeit",
+          "verdict": "na",
+          "state_proof": false,
+          "detail": "Registrierungsversuch ergab: nicht formulierbar: MAX: ZQL query object has no max() method in this installed version",
+          "latency_s": null
+        }
+      ],
+      "state_proofs_passed": 0,
+      "median_converge_s": null
+    }
+  },
+  "capability_method": "runtime_registration_probe_against_installed_zero",
+  "capability_marker": "__NOT_EXPRESSIBLE__:"
+}

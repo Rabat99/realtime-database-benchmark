@@ -1,0 +1,2628 @@
+{
+  "system": "zero",
+  "test": "subscription_init",
+  "subscribers": 250,
+  "clients": 250,
+  "queries_per_client": 1.0,
+  "query_class": "window_join",
+  "limit": 10,
+  "topics": 30000,
+  "barrier": true,
+  "measurement_definition": "query_materialize_start_to_first_complete",
+  "connection_definition": "Zero connection state connected before barrier arm",
+  "connected_client_count": 250,
+  "armed_client_count": 250,
+  "released_client_count": 250,
+  "query_started_count": 250,
+  "query_ready_event_count": 250,
+  "ready_count": 250,
+  "missing_ready_measurements": 0,
+  "ready_ms": {
+    "p50": 3917.062,
+    "p90": 4452.10519,
+    "p95": 4510.219565,
+    "min": 2431.9025,
+    "max": 4605.8813,
+    "mean": 3778.0148892
+  },
+  "start_spread_ms": 225.6553,
+  "start_spread_ratio_to_p50": 0.05760830438731887,
+  "start_spread_diagnostic": {
+    "reference_ratio": 0.2,
+    "within_reference": true,
+    "validity_gate": false
+  },
+  "client_release_to_start_ms": {
+    "p50": 0.303,
+    "p90": 2.4477899999999946,
+    "p95": 13.927984999999925,
+    "min": 0.215,
+    "max": 58.9469,
+    "mean": 2.0723448
+  },
+  "python_release_to_start_ms": {
+    "p50": 65.17944399999999,
+    "p90": 140.056874,
+    "p95": 161.84247399999992,
+    "min": 6.232094,
+    "max": 231.887394,
+    "mean": 73.9593768
+  },
+  "batch": {
+    "release_to_first_start_ms": 6.232094,
+    "release_to_last_start_ms": 231.887394,
+    "release_to_first_ready_ms": 2438.259294,
+    "release_to_last_ready_ms": 4659.833394,
+    "ready_span_ms": 2221.5741,
+    "completion_rate_per_s": 53.72183474334168
+  },
+  "concurrency": {
+    "peak_concurrent_hydrations": 250,
+    "time_weighted_mean_concurrency": 202.96189153548673,
+    "little_mean_concurrency": 202.96189153548673,
+    "wall_span_ms": 4653.6013
+  },
+  "harness": {
+    "max_loop_lag_ms": 80.596,
+    "max_allowed_loop_lag_ms": 300.0,
+    "loop_lag_ms_per_client": {
+      "bench-165": 1.825,
+      "bench-72": 19.806,
+      "bench-88": 2.007,
+      "bench-59": 57.827,
+      "bench-175": 0.777,
+      "bench-190": 1.07,
+      "bench-69": 1.412,
+      "bench-146": 0.842,
+      "bench-150": 31.92,
+      "bench-61": 18.048,
+      "bench-106": 38.542,
+      "bench-58": 0.644,
+      "bench-148": 12.331,
+      "bench-105": 2.73,
+      "bench-181": 40.416,
+      "bench-198": 1.702,
+      "bench-25": 0.571,
+      "bench-203": 0.336,
+      "bench-180": 0.687,
+      "bench-218": 2.358,
+      "bench-149": 2.595,
+      "bench-82": 1.107,
+      "bench-163": 68.823,
+      "bench-167": 2.387,
+      "bench-170": 53.699,
+      "bench-197": 38.407,
+      "bench-211": 7.186,
+      "bench-222": 2.593,
+      "bench-185": 0.706,
+      "bench-63": 1.524,
+      "bench-20": 2.935,
+      "bench-0": 1.95,
+      "bench-75": 75.439,
+      "bench-236": 0.586,
+      "bench-186": 0.794,
+      "bench-31": 2.933,
+      "bench-76": 6.361,
+      "bench-217": 10.899,
+      "bench-184": 66.415,
+      "bench-151": 0.507,
+      "bench-101": 2.184,
+      "bench-232": 1.094,
+      "bench-193": 0.837,
+      "bench-208": 5.39,
+      "bench-230": 0.964,
+      "bench-188": 0.609,
+      "bench-223": 34.382,
+      "bench-65": 66.668,
+      "bench-34": 11.58,
+      "bench-7": 1.879,
+      "bench-9": 17.561,
+      "bench-169": 2.835,
+      "bench-172": 16.723,
+      "bench-104": 1.901,
+      "bench-8": 0.642,
+      "bench-179": 0.653,
+      "bench-115": 0.909,
+      "bench-15": 0.962,
+      "bench-227": 1.386,
+      "bench-125": 0.607,
+      "bench-171": 79.172,
+      "bench-177": 9.442,
+      "bench-26": 0.947,
+      "bench-98": 0.705,
+      "bench-64": 0.979,
+      "bench-154": 2.196,
+      "bench-99": 4.613,
+      "bench-113": 0.959,
+      "bench-134": 2.123,
+      "bench-137": 0.535,
+      "bench-39": 4.106,
+      "bench-174": 6.966,
+      "bench-93": 0.659,
+      "bench-127": 0.539,
+      "bench-4": 18.669,
+      "bench-27": 8.075,
+      "bench-71": 1.083,
+      "bench-245": 1.626,
+      "bench-182": 0.963,
+      "bench-47": 69.028,
+      "bench-117": 1.026,
+      "bench-18": 0.683,
+      "bench-194": 6.06,
+      "bench-205": 1.025,
+      "bench-118": 1.004,
+      "bench-249": 0.465,
+      "bench-231": 2.582,
+      "bench-233": 3.191,
+      "bench-55": 11.565,
+      "bench-108": 0.67,
+      "bench-24": 1.582,
+      "bench-126": 0.539,
+      "bench-74": 1.474,
+      "bench-183": 0.977,
+      "bench-92": 20.228,
+      "bench-161": 1.014,
+      "bench-50": 22.305,
+      "bench-102": 23.386,
+      "bench-12": 0.615,
+      "bench-153": 76.21,
+      "bench-158": 0.497,
+      "bench-89": 57.768,
+      "bench-152": 0.69,
+      "bench-51": 1.531,
+      "bench-141": 3.227,
+      "bench-178": 4.348,
+      "bench-85": 1.178,
+      "bench-135": 2.142,
+      "bench-133": 3.272,
+      "bench-2": 21.799,
+      "bench-17": 40.652,
+      "bench-38": 2.398,
+      "bench-14": 5.348,
+      "bench-11": 1.461,
+      "bench-6": 0.646,
+      "bench-13": 0.665,
+      "bench-132": 0.459,
+      "bench-60": 0.683,
+      "bench-176": 1.062,
+      "bench-42": 2.991,
+      "bench-229": 1.384,
+      "bench-235": 25.143,
+      "bench-244": 2.539,
+      "bench-195": 0.551,
+      "bench-157": 2.094,
+      "bench-201": 1.477,
+      "bench-114": 1.84,
+      "bench-10": 0.951,
+      "bench-228": 0.655,
+      "bench-221": 1.299,
+      "bench-207": 2.05,
+      "bench-187": 1.454,
+      "bench-32": 0.77,
+      "bench-142": 9.813,
+      "bench-67": 0.486,
+      "bench-28": 4.975,
+      "bench-52": 2.454,
+      "bench-73": 1.794,
+      "bench-139": 2.526,
+      "bench-87": 0.491,
+      "bench-248": 32.234,
+      "bench-16": 3.492,
+      "bench-210": 1.716,
+      "bench-215": 2.677,
+      "bench-237": 1.475,
+      "bench-136": 1.314,
+      "bench-80": 1.638,
+      "bench-30": 0.564,
+      "bench-97": 16.47,
+      "bench-168": 0.805,
+      "bench-209": 0.537,
+      "bench-189": 1.35,
+      "bench-123": 25.191,
+      "bench-160": 1.467,
+      "bench-164": 54.422,
+      "bench-66": 78.845,
+      "bench-90": 2.038,
+      "bench-68": 1.633,
+      "bench-119": 4.178,
+      "bench-1": 1.83,
+      "bench-77": 53.402,
+      "bench-116": 58.029,
+      "bench-196": 1.176,
+      "bench-212": 1.392,
+      "bench-22": 55.839,
+      "bench-49": 41.751,
+      "bench-199": 0.851,
+      "bench-95": 1.035,
+      "bench-46": 1.293,
+      "bench-124": 1.674,
+      "bench-91": 1.497,
+      "bench-213": 0.893,
+      "bench-112": 80.596,
+      "bench-62": 2.079,
+      "bench-86": 7.54,
+      "bench-41": 52.996,
+      "bench-57": 41.995,
+      "bench-220": 0.824,
+      "bench-56": 13.985,
+      "bench-81": 0.866,
+      "bench-204": 0.23,
+      "bench-94": 0.493,
+      "bench-162": 1.159,
+      "bench-234": 5.291,
+      "bench-121": 32.185,
+      "bench-173": 0.435,
+      "bench-111": 52.184,
+      "bench-40": 48.943,
+      "bench-155": 0.699,
+      "bench-130": 0.601,
+      "bench-45": 13.042,
+      "bench-5": 0.941,
+      "bench-145": 0.949,
+      "bench-84": 1.885,
+      "bench-191": 0.591,
+      "bench-216": 0.815,
+      "bench-166": 2.708,
+      "bench-23": 2.165,
+      "bench-107": 0.596,
+      "bench-44": 0.761,
+      "bench-239": 2.414,
+      "bench-120": 1.637,
+      "bench-35": 19.585,
+      "bench-122": 80.416,
+      "bench-147": 1.529,
+      "bench-159": 2.371,
+      "bench-21": 17.754,
+      "bench-19": 19.483,
+      "bench-225": 2.097,
+      "bench-247": 3.891,
+      "bench-206": 25.468,
+      "bench-219": 1.009,
+      "bench-143": 76.829,
+      "bench-238": 1.274,
+      "bench-53": 3.315,
+      "bench-36": 29.403,
+      "bench-48": 3.802,
+      "bench-224": 74.005,
+      "bench-140": 20.74,
+      "bench-43": 0.732,
+      "bench-242": 0.501,
+      "bench-241": 63.382,
+      "bench-192": 1.146,
+      "bench-200": 5.696,
+      "bench-138": 1.794,
+      "bench-226": 0.4,
+      "bench-54": 35.51,
+      "bench-243": 0.348,
+      "bench-214": 1.374,
+      "bench-240": 2.576,
+      "bench-246": 3.331,
+      "bench-79": 39.994,
+      "bench-100": 13.706,
+      "bench-78": 0.486,
+      "bench-144": 0.934,
+      "bench-29": 2.935,
+      "bench-110": 1.06,
+      "bench-70": 41.063,
+      "bench-37": 0.383,
+      "bench-202": 5.331,
+      "bench-129": 1.781,
+      "bench-156": 3.654,
+      "bench-103": 2.378,
+      "bench-131": 4.544,
+      "bench-83": 1.846,
+      "bench-128": 0.705,
+      "bench-3": 2.699,
+      "bench-33": 47.629,
+      "bench-109": 1.921,
+      "bench-96": 1.452
+    }
+  },
+  "observed_event_types": {
+    "started": {
+      "count": 250,
+      "first_ns": 1788091071992283100,
+      "last_ns": 1788091151802533000
+    },
+    "connected": {
+      "count": 250,
+      "first_ns": 1788091072031704300,
+      "last_ns": 1788091151843547400
+    },
+    "armed": {
+      "count": 250,
+      "first_ns": 1788091072032353000,
+      "last_ns": 1788091151844309200
+    },
+    "released": {
+      "count": 250,
+      "first_ns": 1788091152116718800,
+      "last_ns": 1788091152334157800
+    },
+    "query-start": {
+      "count": 250,
+      "first_ns": 1788091152117145300,
+      "last_ns": 1788091152342800600
+    },
+    "loop-lag": {
+      "count": 483,
+      "first_ns": 1788091152242470700,
+      "last_ns": 1788091156770800400
+    },
+    "query-ready": {
+      "count": 250,
+      "first_ns": 1788091154549172500,
+      "last_ns": 1788091156770746600
+    },
+    "ready": {
+      "count": 250,
+      "first_ns": 1788091154549277400,
+      "last_ns": 1788091156770822000
+    }
+  },
+  "valid": {
+    "all_clients_connected": true,
+    "all_clients_armed": true,
+    "all_clients_released": true,
+    "all_queries_started": true,
+    "all_queries_ready": true,
+    "no_client_errors": true,
+    "no_query_before_client_release": true,
+    "full_concurrency_observed": true,
+    "harness_loop_lag_ok": true
+  },
+  "valid_run": true,
+  "samples": [
+    {
+      "client_id": "bench-3",
+      "query_index": 3,
+      "start_epoch_ns": 1788091152117145300,
+      "ready_epoch_ns": 1788091156618399700,
+      "start_offset_from_python_release_ms": 6.232094,
+      "client_release_to_start_ms": 0.4265,
+      "ready_ms": 4501.2544
+    },
+    {
+      "client_id": "bench-4",
+      "query_index": 4,
+      "start_epoch_ns": 1788091152117190000,
+      "ready_epoch_ns": 1788091154570001000,
+      "start_offset_from_python_release_ms": 6.276794,
+      "client_release_to_start_ms": 0.324,
+      "ready_ms": 2452.811
+    },
+    {
+      "client_id": "bench-0",
+      "query_index": 0,
+      "start_epoch_ns": 1788091152117270000,
+      "ready_epoch_ns": 1788091154549172500,
+      "start_offset_from_python_release_ms": 6.356794,
+      "client_release_to_start_ms": 0.3336,
+      "ready_ms": 2431.9025
+    },
+    {
+      "client_id": "bench-1",
+      "query_index": 1,
+      "start_epoch_ns": 1788091152117521700,
+      "ready_epoch_ns": 1788091155145783000,
+      "start_offset_from_python_release_ms": 6.608494,
+      "client_release_to_start_ms": 0.5217,
+      "ready_ms": 3028.2613
+    },
+    {
+      "client_id": "bench-8",
+      "query_index": 8,
+      "start_epoch_ns": 1788091152118303700,
+      "ready_epoch_ns": 1788091154737681000,
+      "start_offset_from_python_release_ms": 7.390494,
+      "client_release_to_start_ms": 0.2841,
+      "ready_ms": 2619.3773
+    },
+    {
+      "client_id": "bench-11",
+      "query_index": 11,
+      "start_epoch_ns": 1788091152118993700,
+      "ready_epoch_ns": 1788091154587418000,
+      "start_offset_from_python_release_ms": 8.080494,
+      "client_release_to_start_ms": 0.3547,
+      "ready_ms": 2468.4243
+    },
+    {
+      "client_id": "bench-6",
+      "query_index": 6,
+      "start_epoch_ns": 1788091152119032800,
+      "ready_epoch_ns": 1788091154592352300,
+      "start_offset_from_python_release_ms": 8.119594,
+      "client_release_to_start_ms": 0.3041,
+      "ready_ms": 2473.3195
+    },
+    {
+      "client_id": "bench-12",
+      "query_index": 12,
+      "start_epoch_ns": 1788091152119487700,
+      "ready_epoch_ns": 1788091154592009000,
+      "start_offset_from_python_release_ms": 8.574494,
+      "client_release_to_start_ms": 0.3061,
+      "ready_ms": 2472.5213
+    },
+    {
+      "client_id": "bench-14",
+      "query_index": 14,
+      "start_epoch_ns": 1788091152120051000,
+      "ready_epoch_ns": 1788091154587404500,
+      "start_offset_from_python_release_ms": 9.137794,
+      "client_release_to_start_ms": 0.336,
+      "ready_ms": 2467.3535
+    },
+    {
+      "client_id": "bench-17",
+      "query_index": 17,
+      "start_epoch_ns": 1788091152120444200,
+      "ready_epoch_ns": 1788091154570657500,
+      "start_offset_from_python_release_ms": 9.530994,
+      "client_release_to_start_ms": 0.2788,
+      "ready_ms": 2450.2133
+    },
+    {
+      "client_id": "bench-5",
+      "query_index": 5,
+      "start_epoch_ns": 1788091152120660500,
+      "ready_epoch_ns": 1788091155751170000,
+      "start_offset_from_python_release_ms": 9.747294,
+      "client_release_to_start_ms": 0.3681,
+      "ready_ms": 3630.5095
+    },
+    {
+      "client_id": "bench-2",
+      "query_index": 2,
+      "start_epoch_ns": 1788091152120732400,
+      "ready_epoch_ns": 1788091154570598400,
+      "start_offset_from_python_release_ms": 9.819194,
+      "client_release_to_start_ms": 0.4047,
+      "ready_ms": 2449.866
+    },
+    {
+      "client_id": "bench-13",
+      "query_index": 13,
+      "start_epoch_ns": 1788091152121137200,
+      "ready_epoch_ns": 1788091154598843100,
+      "start_offset_from_python_release_ms": 10.223994,
+      "client_release_to_start_ms": 0.456,
+      "ready_ms": 2477.7059
+    },
+    {
+      "client_id": "bench-9",
+      "query_index": 9,
+      "start_epoch_ns": 1788091152124840000,
+      "ready_epoch_ns": 1788091156300682500,
+      "start_offset_from_python_release_ms": 13.926794,
+      "client_release_to_start_ms": 0.3375,
+      "ready_ms": 4175.8425
+    },
+    {
+      "client_id": "bench-10",
+      "query_index": 10,
+      "start_epoch_ns": 1788091152127804400,
+      "ready_epoch_ns": 1788091154800861700,
+      "start_offset_from_python_release_ms": 16.891194,
+      "client_release_to_start_ms": 8.4792,
+      "ready_ms": 2673.0573
+    },
+    {
+      "client_id": "bench-7",
+      "query_index": 7,
+      "start_epoch_ns": 1788091152128633000,
+      "ready_epoch_ns": 1788091154571421200,
+      "start_offset_from_python_release_ms": 17.719794,
+      "client_release_to_start_ms": 0.2856,
+      "ready_ms": 2442.7882
+    },
+    {
+      "client_id": "bench-39",
+      "query_index": 39,
+      "start_epoch_ns": 1788091152129121000,
+      "ready_epoch_ns": 1788091156107188700,
+      "start_offset_from_python_release_ms": 18.207794,
+      "client_release_to_start_ms": 0.2534,
+      "ready_ms": 3978.0677
+    },
+    {
+      "client_id": "bench-49",
+      "query_index": 49,
+      "start_epoch_ns": 1788091152129262600,
+      "ready_epoch_ns": 1788091156483778300,
+      "start_offset_from_python_release_ms": 18.349394,
+      "client_release_to_start_ms": 0.438,
+      "ready_ms": 4354.5157
+    },
+    {
+      "client_id": "bench-38",
+      "query_index": 38,
+      "start_epoch_ns": 1788091152129545200,
+      "ready_epoch_ns": 1788091154571378400,
+      "start_offset_from_python_release_ms": 18.631994,
+      "client_release_to_start_ms": 0.2998,
+      "ready_ms": 2441.8332
+    },
+    {
+      "client_id": "bench-42",
+      "query_index": 42,
+      "start_epoch_ns": 1788091152129724700,
+      "ready_epoch_ns": 1788091154670201000,
+      "start_offset_from_python_release_ms": 18.811494,
+      "client_release_to_start_ms": 0.3117,
+      "ready_ms": 2540.4763
+    },
+    {
+      "client_id": "bench-37",
+      "query_index": 37,
+      "start_epoch_ns": 1788091152129774000,
+      "ready_epoch_ns": 1788091156386745300,
+      "start_offset_from_python_release_ms": 18.860794,
+      "client_release_to_start_ms": 0.4103,
+      "ready_ms": 4256.9713
+    },
+    {
+      "client_id": "bench-19",
+      "query_index": 19,
+      "start_epoch_ns": 1788091152130082800,
+      "ready_epoch_ns": 1788091156361949000,
+      "start_offset_from_python_release_ms": 19.169594,
+      "client_release_to_start_ms": 0.2408,
+      "ready_ms": 4231.8662
+    },
+    {
+      "client_id": "bench-31",
+      "query_index": 31,
+      "start_epoch_ns": 1788091152130143500,
+      "ready_epoch_ns": 1788091154698231800,
+      "start_offset_from_python_release_ms": 19.230294,
+      "client_release_to_start_ms": 0.2829,
+      "ready_ms": 2568.0883
+    },
+    {
+      "client_id": "bench-34",
+      "query_index": 34,
+      "start_epoch_ns": 1788091152130654200,
+      "ready_epoch_ns": 1788091156259557600,
+      "start_offset_from_python_release_ms": 19.740994,
+      "client_release_to_start_ms": 0.2332,
+      "ready_ms": 4128.9034
+    },
+    {
+      "client_id": "bench-45",
+      "query_index": 45,
+      "start_epoch_ns": 1788091152131812900,
+      "ready_epoch_ns": 1788091155673678000,
+      "start_offset_from_python_release_ms": 20.899694,
+      "client_release_to_start_ms": 2.3583,
+      "ready_ms": 3541.8651
+    },
+    {
+      "client_id": "bench-53",
+      "query_index": 53,
+      "start_epoch_ns": 1788091152132360000,
+      "ready_epoch_ns": 1788091156012769000,
+      "start_offset_from_python_release_ms": 21.446794,
+      "client_release_to_start_ms": 0.2553,
+      "ready_ms": 3880.409
+    },
+    {
+      "client_id": "bench-35",
+      "query_index": 35,
+      "start_epoch_ns": 1788091152132486700,
+      "ready_epoch_ns": 1788091155870275300,
+      "start_offset_from_python_release_ms": 21.573494,
+      "client_release_to_start_ms": 0.2962,
+      "ready_ms": 3737.7886
+    },
+    {
+      "client_id": "bench-16",
+      "query_index": 16,
+      "start_epoch_ns": 1788091152132546600,
+      "ready_epoch_ns": 1788091155373051000,
+      "start_offset_from_python_release_ms": 21.633394,
+      "client_release_to_start_ms": 0.3036,
+      "ready_ms": 3240.5044
+    },
+    {
+      "client_id": "bench-52",
+      "query_index": 52,
+      "start_epoch_ns": 1788091152132599300,
+      "ready_epoch_ns": 1788091156180060200,
+      "start_offset_from_python_release_ms": 21.686094,
+      "client_release_to_start_ms": 0.3379,
+      "ready_ms": 4047.4609
+    },
+    {
+      "client_id": "bench-58",
+      "query_index": 58,
+      "start_epoch_ns": 1788091152132628000,
+      "ready_epoch_ns": 1788091156563177200,
+      "start_offset_from_python_release_ms": 21.714794,
+      "client_release_to_start_ms": 0.2532,
+      "ready_ms": 4430.5492
+    },
+    {
+      "client_id": "bench-54",
+      "query_index": 54,
+      "start_epoch_ns": 1788091152132971300,
+      "ready_epoch_ns": 1788091156492344000,
+      "start_offset_from_python_release_ms": 22.058094,
+      "client_release_to_start_ms": 0.5571,
+      "ready_ms": 4359.3727
+    },
+    {
+      "client_id": "bench-46",
+      "query_index": 46,
+      "start_epoch_ns": 1788091152132989400,
+      "ready_epoch_ns": 1788091155328850400,
+      "start_offset_from_python_release_ms": 22.076194,
+      "client_release_to_start_ms": 0.4288,
+      "ready_ms": 3195.861
+    },
+    {
+      "client_id": "bench-43",
+      "query_index": 43,
+      "start_epoch_ns": 1788091152133132800,
+      "ready_epoch_ns": 1788091156104809000,
+      "start_offset_from_python_release_ms": 22.219594,
+      "client_release_to_start_ms": 0.4593,
+      "ready_ms": 3971.6762
+    },
+    {
+      "client_id": "bench-41",
+      "query_index": 41,
+      "start_epoch_ns": 1788091152133204200,
+      "ready_epoch_ns": 1788091155393471700,
+      "start_offset_from_python_release_ms": 22.290994,
+      "client_release_to_start_ms": 0.246,
+      "ready_ms": 3260.2675
+    },
+    {
+      "client_id": "bench-25",
+      "query_index": 25,
+      "start_epoch_ns": 1788091152133429000,
+      "ready_epoch_ns": 1788091156413674200,
+      "start_offset_from_python_release_ms": 22.515794,
+      "client_release_to_start_ms": 0.2447,
+      "ready_ms": 4280.2452
+    },
+    {
+      "client_id": "bench-23",
+      "query_index": 23,
+      "start_epoch_ns": 1788091152134276000,
+      "ready_epoch_ns": 1788091155992790800,
+      "start_offset_from_python_release_ms": 23.362794,
+      "client_release_to_start_ms": 3.2532,
+      "ready_ms": 3858.5148
+    },
+    {
+      "client_id": "bench-62",
+      "query_index": 62,
+      "start_epoch_ns": 1788091152134689500,
+      "ready_epoch_ns": 1788091155387204000,
+      "start_offset_from_python_release_ms": 23.776294,
+      "client_release_to_start_ms": 0.3561,
+      "ready_ms": 3252.5145
+    },
+    {
+      "client_id": "bench-70",
+      "query_index": 70,
+      "start_epoch_ns": 1788091152135830500,
+      "ready_epoch_ns": 1788091156546810400,
+      "start_offset_from_python_release_ms": 24.917294,
+      "client_release_to_start_ms": 0.2834,
+      "ready_ms": 4410.9799
+    },
+    {
+      "client_id": "bench-55",
+      "query_index": 55,
+      "start_epoch_ns": 1788091152135907000,
+      "ready_epoch_ns": 1788091156234033200,
+      "start_offset_from_python_release_ms": 24.993794,
+      "client_release_to_start_ms": 0.354,
+      "ready_ms": 4098.1262
+    },
+    {
+      "client_id": "bench-27",
+      "query_index": 27,
+      "start_epoch_ns": 1788091152136148500,
+      "ready_epoch_ns": 1788091156215499300,
+      "start_offset_from_python_release_ms": 25.235294,
+      "client_release_to_start_ms": 0.2453,
+      "ready_ms": 4079.3508
+    },
+    {
+      "client_id": "bench-30",
+      "query_index": 30,
+      "start_epoch_ns": 1788091152136483600,
+      "ready_epoch_ns": 1788091155483887600,
+      "start_offset_from_python_release_ms": 25.570394,
+      "client_release_to_start_ms": 0.296,
+      "ready_ms": 3347.404
+    },
+    {
+      "client_id": "bench-32",
+      "query_index": 32,
+      "start_epoch_ns": 1788091152137078500,
+      "ready_epoch_ns": 1788091156264211200,
+      "start_offset_from_python_release_ms": 26.165294,
+      "client_release_to_start_ms": 0.2731,
+      "ready_ms": 4127.1327
+    },
+    {
+      "client_id": "bench-28",
+      "query_index": 28,
+      "start_epoch_ns": 1788091152137613000,
+      "ready_epoch_ns": 1788091156301880600,
+      "start_offset_from_python_release_ms": 26.699794,
+      "client_release_to_start_ms": 0.2385,
+      "ready_ms": 4164.2676
+    },
+    {
+      "client_id": "bench-76",
+      "query_index": 76,
+      "start_epoch_ns": 1788091152137647600,
+      "ready_epoch_ns": 1788091156342662700,
+      "start_offset_from_python_release_ms": 26.734394,
+      "client_release_to_start_ms": 0.2416,
+      "ready_ms": 4205.0151
+    },
+    {
+      "client_id": "bench-78",
+      "query_index": 78,
+      "start_epoch_ns": 1788091152138311400,
+      "ready_epoch_ns": 1788091156662890800,
+      "start_offset_from_python_release_ms": 27.398194,
+      "client_release_to_start_ms": 0.2774,
+      "ready_ms": 4524.5794
+    },
+    {
+      "client_id": "bench-18",
+      "query_index": 18,
+      "start_epoch_ns": 1788091152139551500,
+      "ready_epoch_ns": 1788091154853942000,
+      "start_offset_from_python_release_ms": 28.638294,
+      "client_release_to_start_ms": 6.912,
+      "ready_ms": 2714.3905
+    },
+    {
+      "client_id": "bench-63",
+      "query_index": 63,
+      "start_epoch_ns": 1788091152139747800,
+      "ready_epoch_ns": 1788091156355262200,
+      "start_offset_from_python_release_ms": 28.834594,
+      "client_release_to_start_ms": 0.2775,
+      "ready_ms": 4215.5144
+    },
+    {
+      "client_id": "bench-22",
+      "query_index": 22,
+      "start_epoch_ns": 1788091152139795000,
+      "ready_epoch_ns": 1788091156662678800,
+      "start_offset_from_python_release_ms": 28.881794,
+      "client_release_to_start_ms": 0.387,
+      "ready_ms": 4522.8838
+    },
+    {
+      "client_id": "bench-20",
+      "query_index": 20,
+      "start_epoch_ns": 1788091152140329500,
+      "ready_epoch_ns": 1788091156746210800,
+      "start_offset_from_python_release_ms": 29.416294,
+      "client_release_to_start_ms": 0.2443,
+      "ready_ms": 4605.8813
+    },
+    {
+      "client_id": "bench-86",
+      "query_index": 86,
+      "start_epoch_ns": 1788091152140363800,
+      "ready_epoch_ns": 1788091155387325400,
+      "start_offset_from_python_release_ms": 29.450594,
+      "client_release_to_start_ms": 0.2908,
+      "ready_ms": 3246.9616
+    },
+    {
+      "client_id": "bench-99",
+      "query_index": 99,
+      "start_epoch_ns": 1788091152142270500,
+      "ready_epoch_ns": 1788091155049354500,
+      "start_offset_from_python_release_ms": 31.357294,
+      "client_release_to_start_ms": 0.3377,
+      "ready_ms": 2907.084
+    },
+    {
+      "client_id": "bench-66",
+      "query_index": 66,
+      "start_epoch_ns": 1788091152143386000,
+      "ready_epoch_ns": 1788091155766388500,
+      "start_offset_from_python_release_ms": 32.472794,
+      "client_release_to_start_ms": 0.2797,
+      "ready_ms": 3623.0025
+    },
+    {
+      "client_id": "bench-77",
+      "query_index": 77,
+      "start_epoch_ns": 1788091152143999700,
+      "ready_epoch_ns": 1788091156639269400,
+      "start_offset_from_python_release_ms": 33.086494,
+      "client_release_to_start_ms": 0.3443,
+      "ready_ms": 4495.2697
+    },
+    {
+      "client_id": "bench-67",
+      "query_index": 67,
+      "start_epoch_ns": 1788091152144219100,
+      "ready_epoch_ns": 1788091154861708300,
+      "start_offset_from_python_release_ms": 33.305894,
+      "client_release_to_start_ms": 0.2498,
+      "ready_ms": 2717.4892
+    },
+    {
+      "client_id": "bench-26",
+      "query_index": 26,
+      "start_epoch_ns": 1788091152144332000,
+      "ready_epoch_ns": 1788091156656156400,
+      "start_offset_from_python_release_ms": 33.418794,
+      "client_release_to_start_ms": 0.2654,
+      "ready_ms": 4511.8244
+    },
+    {
+      "client_id": "bench-114",
+      "query_index": 114,
+      "start_epoch_ns": 1788091152144977000,
+      "ready_epoch_ns": 1788091154771915000,
+      "start_offset_from_python_release_ms": 34.063794,
+      "client_release_to_start_ms": 0.2628,
+      "ready_ms": 2626.938
+    },
+    {
+      "client_id": "bench-97",
+      "query_index": 97,
+      "start_epoch_ns": 1788091152145137200,
+      "ready_epoch_ns": 1788091156692350500,
+      "start_offset_from_python_release_ms": 34.223994,
+      "client_release_to_start_ms": 0.2955,
+      "ready_ms": 4547.2133
+    },
+    {
+      "client_id": "bench-118",
+      "query_index": 118,
+      "start_epoch_ns": 1788091152145813000,
+      "ready_epoch_ns": 1788091156193771800,
+      "start_offset_from_python_release_ms": 34.899794,
+      "client_release_to_start_ms": 0.303,
+      "ready_ms": 4047.9588
+    },
+    {
+      "client_id": "bench-51",
+      "query_index": 51,
+      "start_epoch_ns": 1788091152146372600,
+      "ready_epoch_ns": 1788091155100070000,
+      "start_offset_from_python_release_ms": 35.459394,
+      "client_release_to_start_ms": 0.3326,
+      "ready_ms": 2953.6974
+    },
+    {
+      "client_id": "bench-57",
+      "query_index": 57,
+      "start_epoch_ns": 1788091152147029000,
+      "ready_epoch_ns": 1788091155419723300,
+      "start_offset_from_python_release_ms": 36.115794,
+      "client_release_to_start_ms": 0.3003,
+      "ready_ms": 3272.6943
+    },
+    {
+      "client_id": "bench-56",
+      "query_index": 56,
+      "start_epoch_ns": 1788091152147055000,
+      "ready_epoch_ns": 1788091156447251200,
+      "start_offset_from_python_release_ms": 36.141794,
+      "client_release_to_start_ms": 0.323,
+      "ready_ms": 4300.1962
+    },
+    {
+      "client_id": "bench-88",
+      "query_index": 88,
+      "start_epoch_ns": 1788091152148405500,
+      "ready_epoch_ns": 1788091156342282000,
+      "start_offset_from_python_release_ms": 37.492294,
+      "client_release_to_start_ms": 0.268,
+      "ready_ms": 4193.8765
+    },
+    {
+      "client_id": "bench-75",
+      "query_index": 75,
+      "start_epoch_ns": 1788091152148521500,
+      "ready_epoch_ns": 1788091156705974500,
+      "start_offset_from_python_release_ms": 37.608294,
+      "client_release_to_start_ms": 0.3125,
+      "ready_ms": 4557.453
+    },
+    {
+      "client_id": "bench-81",
+      "query_index": 81,
+      "start_epoch_ns": 1788091152148524300,
+      "ready_epoch_ns": 1788091155690919000,
+      "start_offset_from_python_release_ms": 37.611094,
+      "client_release_to_start_ms": 0.2709,
+      "ready_ms": 3542.3947
+    },
+    {
+      "client_id": "bench-83",
+      "query_index": 83,
+      "start_epoch_ns": 1788091152149194500,
+      "ready_epoch_ns": 1788091156519370000,
+      "start_offset_from_python_release_ms": 38.281294,
+      "client_release_to_start_ms": 0.257,
+      "ready_ms": 4370.1755
+    },
+    {
+      "client_id": "bench-74",
+      "query_index": 74,
+      "start_epoch_ns": 1788091152149304300,
+      "ready_epoch_ns": 1788091155863662300,
+      "start_offset_from_python_release_ms": 38.391094,
+      "client_release_to_start_ms": 0.2903,
+      "ready_ms": 3714.358
+    },
+    {
+      "client_id": "bench-72",
+      "query_index": 72,
+      "start_epoch_ns": 1788091152150351600,
+      "ready_epoch_ns": 1788091155118157600,
+      "start_offset_from_python_release_ms": 39.438394,
+      "client_release_to_start_ms": 0.3021,
+      "ready_ms": 2967.806
+    },
+    {
+      "client_id": "bench-48",
+      "query_index": 48,
+      "start_epoch_ns": 1788091152151059200,
+      "ready_epoch_ns": 1788091156200043300,
+      "start_offset_from_python_release_ms": 40.145994,
+      "client_release_to_start_ms": 0.2719,
+      "ready_ms": 4048.9841
+    },
+    {
+      "client_id": "bench-106",
+      "query_index": 106,
+      "start_epoch_ns": 1788091152152083200,
+      "ready_epoch_ns": 1788091155470264600,
+      "start_offset_from_python_release_ms": 41.169994,
+      "client_release_to_start_ms": 0.2829,
+      "ready_ms": 3318.1814
+    },
+    {
+      "client_id": "bench-108",
+      "query_index": 108,
+      "start_epoch_ns": 1788091152152426000,
+      "ready_epoch_ns": 1788091154855049700,
+      "start_offset_from_python_release_ms": 41.512794,
+      "client_release_to_start_ms": 0.274,
+      "ready_ms": 2702.6237
+    },
+    {
+      "client_id": "bench-87",
+      "query_index": 87,
+      "start_epoch_ns": 1788091152152870100,
+      "ready_epoch_ns": 1788091156623210800,
+      "start_offset_from_python_release_ms": 41.956894,
+      "client_release_to_start_ms": 0.3831,
+      "ready_ms": 4470.3407
+    },
+    {
+      "client_id": "bench-59",
+      "query_index": 59,
+      "start_epoch_ns": 1788091152153278000,
+      "ready_epoch_ns": 1788091155744379600,
+      "start_offset_from_python_release_ms": 42.364794,
+      "client_release_to_start_ms": 0.287,
+      "ready_ms": 3591.1016
+    },
+    {
+      "client_id": "bench-169",
+      "query_index": 169,
+      "start_epoch_ns": 1788091152154131700,
+      "ready_epoch_ns": 1788091156427437000,
+      "start_offset_from_python_release_ms": 43.218494,
+      "client_release_to_start_ms": 0.4587,
+      "ready_ms": 4273.3053
+    },
+    {
+      "client_id": "bench-124",
+      "query_index": 124,
+      "start_epoch_ns": 1788091152154664700,
+      "ready_epoch_ns": 1788091155869621200,
+      "start_offset_from_python_release_ms": 43.751494,
+      "client_release_to_start_ms": 0.2913,
+      "ready_ms": 3714.9565
+    },
+    {
+      "client_id": "bench-126",
+      "query_index": 126,
+      "start_epoch_ns": 1788091152155244800,
+      "ready_epoch_ns": 1788091155901058600,
+      "start_offset_from_python_release_ms": 44.331594,
+      "client_release_to_start_ms": 0.3021,
+      "ready_ms": 3745.8138
+    },
+    {
+      "client_id": "bench-139",
+      "query_index": 139,
+      "start_epoch_ns": 1788091152155513300,
+      "ready_epoch_ns": 1788091156482249700,
+      "start_offset_from_python_release_ms": 44.600094,
+      "client_release_to_start_ms": 0.238,
+      "ready_ms": 4326.7364
+    },
+    {
+      "client_id": "bench-149",
+      "query_index": 149,
+      "start_epoch_ns": 1788091152156107300,
+      "ready_epoch_ns": 1788091156138475500,
+      "start_offset_from_python_release_ms": 45.194094,
+      "client_release_to_start_ms": 0.5008,
+      "ready_ms": 3982.3682
+    },
+    {
+      "client_id": "bench-111",
+      "query_index": 111,
+      "start_epoch_ns": 1788091152156858400,
+      "ready_epoch_ns": 1788091155705302000,
+      "start_offset_from_python_release_ms": 45.945194,
+      "client_release_to_start_ms": 0.2964,
+      "ready_ms": 3548.4436
+    },
+    {
+      "client_id": "bench-68",
+      "query_index": 68,
+      "start_epoch_ns": 1788091152156911400,
+      "ready_epoch_ns": 1788091156349498600,
+      "start_offset_from_python_release_ms": 45.998194,
+      "client_release_to_start_ms": 0.253,
+      "ready_ms": 4192.5872
+    },
+    {
+      "client_id": "bench-98",
+      "query_index": 98,
+      "start_epoch_ns": 1788091152157051000,
+      "ready_epoch_ns": 1788091156651281700,
+      "start_offset_from_python_release_ms": 46.137794,
+      "client_release_to_start_ms": 0.272,
+      "ready_ms": 4494.2307
+    },
+    {
+      "client_id": "bench-100",
+      "query_index": 100,
+      "start_epoch_ns": 1788091152157746200,
+      "ready_epoch_ns": 1788091156179784700,
+      "start_offset_from_python_release_ms": 46.832994,
+      "client_release_to_start_ms": 0.2722,
+      "ready_ms": 4022.0385
+    },
+    {
+      "client_id": "bench-200",
+      "query_index": 200,
+      "start_epoch_ns": 1788091152158515700,
+      "ready_epoch_ns": 1788091156127783700,
+      "start_offset_from_python_release_ms": 47.602494,
+      "client_release_to_start_ms": 0.2301,
+      "ready_ms": 3969.268
+    },
+    {
+      "client_id": "bench-90",
+      "query_index": 90,
+      "start_epoch_ns": 1788091152159260700,
+      "ready_epoch_ns": 1788091155807995100,
+      "start_offset_from_python_release_ms": 48.347494,
+      "client_release_to_start_ms": 0.2279,
+      "ready_ms": 3648.7344
+    },
+    {
+      "client_id": "bench-44",
+      "query_index": 44,
+      "start_epoch_ns": 1788091152159756300,
+      "ready_epoch_ns": 1788091156074614300,
+      "start_offset_from_python_release_ms": 48.843094,
+      "client_release_to_start_ms": 0.3018,
+      "ready_ms": 3914.858
+    },
+    {
+      "client_id": "bench-178",
+      "query_index": 178,
+      "start_epoch_ns": 1788091152159910700,
+      "ready_epoch_ns": 1788091156510991600,
+      "start_offset_from_python_release_ms": 48.997494,
+      "client_release_to_start_ms": 0.2911,
+      "ready_ms": 4351.0809
+    },
+    {
+      "client_id": "bench-137",
+      "query_index": 137,
+      "start_epoch_ns": 1788091152160274700,
+      "ready_epoch_ns": 1788091156090951200,
+      "start_offset_from_python_release_ms": 49.361494,
+      "client_release_to_start_ms": 0.2824,
+      "ready_ms": 3930.6765
+    },
+    {
+      "client_id": "bench-82",
+      "query_index": 82,
+      "start_epoch_ns": 1788091152160469200,
+      "ready_epoch_ns": 1788091156761572400,
+      "start_offset_from_python_release_ms": 49.555994,
+      "client_release_to_start_ms": 0.2754,
+      "ready_ms": 4601.1032
+    },
+    {
+      "client_id": "bench-125",
+      "query_index": 125,
+      "start_epoch_ns": 1788091152160479500,
+      "ready_epoch_ns": 1788091156320800500,
+      "start_offset_from_python_release_ms": 49.566294,
+      "client_release_to_start_ms": 0.3195,
+      "ready_ms": 4160.321
+    },
+    {
+      "client_id": "bench-164",
+      "query_index": 164,
+      "start_epoch_ns": 1788091152160593200,
+      "ready_epoch_ns": 1788091155741698000,
+      "start_offset_from_python_release_ms": 49.679994,
+      "client_release_to_start_ms": 0.3257,
+      "ready_ms": 3581.1048
+    },
+    {
+      "client_id": "bench-40",
+      "query_index": 40,
+      "start_epoch_ns": 1788091152160719600,
+      "ready_epoch_ns": 1788091155663142000,
+      "start_offset_from_python_release_ms": 49.806394,
+      "client_release_to_start_ms": 0.2762,
+      "ready_ms": 3502.4224
+    },
+    {
+      "client_id": "bench-85",
+      "query_index": 85,
+      "start_epoch_ns": 1788091152161115000,
+      "ready_epoch_ns": 1788091156375159300,
+      "start_offset_from_python_release_ms": 50.201794,
+      "client_release_to_start_ms": 0.342,
+      "ready_ms": 4214.0443
+    },
+    {
+      "client_id": "bench-110",
+      "query_index": 110,
+      "start_epoch_ns": 1788091152162074400,
+      "ready_epoch_ns": 1788091156228974000,
+      "start_offset_from_python_release_ms": 51.161194,
+      "client_release_to_start_ms": 0.2481,
+      "ready_ms": 4066.8996
+    },
+    {
+      "client_id": "bench-177",
+      "query_index": 177,
+      "start_epoch_ns": 1788091152162432300,
+      "ready_epoch_ns": 1788091156454524400,
+      "start_offset_from_python_release_ms": 51.519094,
+      "client_release_to_start_ms": 11.5153,
+      "ready_ms": 4292.0921
+    },
+    {
+      "client_id": "bench-151",
+      "query_index": 151,
+      "start_epoch_ns": 1788091152162830000,
+      "ready_epoch_ns": 1788091155511690500,
+      "start_offset_from_python_release_ms": 51.916794,
+      "client_release_to_start_ms": 0.2836,
+      "ready_ms": 3348.8605
+    },
+    {
+      "client_id": "bench-143",
+      "query_index": 143,
+      "start_epoch_ns": 1788091152163350500,
+      "ready_epoch_ns": 1788091155972760800,
+      "start_offset_from_python_release_ms": 52.437294,
+      "client_release_to_start_ms": 0.3228,
+      "ready_ms": 3809.4103
+    },
+    {
+      "client_id": "bench-96",
+      "query_index": 96,
+      "start_epoch_ns": 1788091152163708200,
+      "ready_epoch_ns": 1788091156761586400,
+      "start_offset_from_python_release_ms": 52.794994,
+      "client_release_to_start_ms": 0.4032,
+      "ready_ms": 4597.8782
+    },
+    {
+      "client_id": "bench-112",
+      "query_index": 112,
+      "start_epoch_ns": 1788091152164182800,
+      "ready_epoch_ns": 1788091155926943700,
+      "start_offset_from_python_release_ms": 53.269594,
+      "client_release_to_start_ms": 0.3482,
+      "ready_ms": 3762.7609
+    },
+    {
+      "client_id": "bench-119",
+      "query_index": 119,
+      "start_epoch_ns": 1788091152164331300,
+      "ready_epoch_ns": 1788091155106854000,
+      "start_offset_from_python_release_ms": 53.418094,
+      "client_release_to_start_ms": 0.2468,
+      "ready_ms": 2942.5227
+    },
+    {
+      "client_id": "bench-150",
+      "query_index": 150,
+      "start_epoch_ns": 1788091152164562000,
+      "ready_epoch_ns": 1788091155560252200,
+      "start_offset_from_python_release_ms": 53.648794,
+      "client_release_to_start_ms": 0.3375,
+      "ready_ms": 3395.6902
+    },
+    {
+      "client_id": "bench-89",
+      "query_index": 89,
+      "start_epoch_ns": 1788091152164589300,
+      "ready_epoch_ns": 1788091156683934700,
+      "start_offset_from_python_release_ms": 53.676094,
+      "client_release_to_start_ms": 0.3126,
+      "ready_ms": 4519.3454
+    },
+    {
+      "client_id": "bench-128",
+      "query_index": 128,
+      "start_epoch_ns": 1788091152165271300,
+      "ready_epoch_ns": 1788091156535810000,
+      "start_offset_from_python_release_ms": 54.358094,
+      "client_release_to_start_ms": 0.2522,
+      "ready_ms": 4370.5387
+    },
+    {
+      "client_id": "bench-131",
+      "query_index": 131,
+      "start_epoch_ns": 1788091152165292300,
+      "ready_epoch_ns": 1788091156506761700,
+      "start_offset_from_python_release_ms": 54.379094,
+      "client_release_to_start_ms": 0.2673,
+      "ready_ms": 4341.4694
+    },
+    {
+      "client_id": "bench-165",
+      "query_index": 165,
+      "start_epoch_ns": 1788091152165351200,
+      "ready_epoch_ns": 1788091156477607400,
+      "start_offset_from_python_release_ms": 54.437994,
+      "client_release_to_start_ms": 0.3126,
+      "ready_ms": 4312.2562
+    },
+    {
+      "client_id": "bench-193",
+      "query_index": 193,
+      "start_epoch_ns": 1788091152166318000,
+      "ready_epoch_ns": 1788091154904450600,
+      "start_offset_from_python_release_ms": 55.404794,
+      "client_release_to_start_ms": 0.2754,
+      "ready_ms": 2738.1326
+    },
+    {
+      "client_id": "bench-160",
+      "query_index": 160,
+      "start_epoch_ns": 1788091152166999600,
+      "ready_epoch_ns": 1788091155619245800,
+      "start_offset_from_python_release_ms": 56.086394,
+      "client_release_to_start_ms": 0.2998,
+      "ready_ms": 3452.2462
+    },
+    {
+      "client_id": "bench-122",
+      "query_index": 122,
+      "start_epoch_ns": 1788091152167329800,
+      "ready_epoch_ns": 1788091155902804200,
+      "start_offset_from_python_release_ms": 56.416594,
+      "client_release_to_start_ms": 0.2683,
+      "ready_ms": 3735.4744
+    },
+    {
+      "client_id": "bench-192",
+      "query_index": 192,
+      "start_epoch_ns": 1788091152167660800,
+      "ready_epoch_ns": 1788091156121330400,
+      "start_offset_from_python_release_ms": 56.747594,
+      "client_release_to_start_ms": 0.2468,
+      "ready_ms": 3953.6696
+    },
+    {
+      "client_id": "bench-127",
+      "query_index": 127,
+      "start_epoch_ns": 1788091152167884800,
+      "ready_epoch_ns": 1788091156465502200,
+      "start_offset_from_python_release_ms": 56.971594,
+      "client_release_to_start_ms": 0.2618,
+      "ready_ms": 4297.6174
+    },
+    {
+      "client_id": "bench-129",
+      "query_index": 129,
+      "start_epoch_ns": 1788091152168421000,
+      "ready_epoch_ns": 1788091156379961300,
+      "start_offset_from_python_release_ms": 57.507794,
+      "client_release_to_start_ms": 0.2444,
+      "ready_ms": 4211.5403
+    },
+    {
+      "client_id": "bench-116",
+      "query_index": 116,
+      "start_epoch_ns": 1788091152168473900,
+      "ready_epoch_ns": 1788091156725502000,
+      "start_offset_from_python_release_ms": 57.560694,
+      "client_release_to_start_ms": 0.3451,
+      "ready_ms": 4557.0281
+    },
+    {
+      "client_id": "bench-80",
+      "query_index": 80,
+      "start_epoch_ns": 1788091152168544800,
+      "ready_epoch_ns": 1788091155009420000,
+      "start_offset_from_python_release_ms": 57.631594,
+      "client_release_to_start_ms": 0.2507,
+      "ready_ms": 2840.8752
+    },
+    {
+      "client_id": "bench-141",
+      "query_index": 141,
+      "start_epoch_ns": 1788091152169003800,
+      "ready_epoch_ns": 1788091156548830200,
+      "start_offset_from_python_release_ms": 58.090594,
+      "client_release_to_start_ms": 0.3216,
+      "ready_ms": 4379.8264
+    },
+    {
+      "client_id": "bench-153",
+      "query_index": 153,
+      "start_epoch_ns": 1788091152170944300,
+      "ready_epoch_ns": 1788091156015812600,
+      "start_offset_from_python_release_ms": 60.031094,
+      "client_release_to_start_ms": 0.3159,
+      "ready_ms": 3844.8683
+    },
+    {
+      "client_id": "bench-245",
+      "query_index": 245,
+      "start_epoch_ns": 1788091152171686100,
+      "ready_epoch_ns": 1788091156293026600,
+      "start_offset_from_python_release_ms": 60.772894,
+      "client_release_to_start_ms": 0.3865,
+      "ready_ms": 4121.3405
+    },
+    {
+      "client_id": "bench-21",
+      "query_index": 21,
+      "start_epoch_ns": 1788091152171952600,
+      "ready_epoch_ns": 1788091156608489700,
+      "start_offset_from_python_release_ms": 61.039394,
+      "client_release_to_start_ms": 0.2836,
+      "ready_ms": 4436.5371
+    },
+    {
+      "client_id": "bench-120",
+      "query_index": 120,
+      "start_epoch_ns": 1788091152172134400,
+      "ready_epoch_ns": 1788091156498369500,
+      "start_offset_from_python_release_ms": 61.221194,
+      "client_release_to_start_ms": 0.2401,
+      "ready_ms": 4326.2351
+    },
+    {
+      "client_id": "bench-173",
+      "query_index": 173,
+      "start_epoch_ns": 1788091152172164000,
+      "ready_epoch_ns": 1788091155564212000,
+      "start_offset_from_python_release_ms": 61.250794,
+      "client_release_to_start_ms": 0.2946,
+      "ready_ms": 3392.048
+    },
+    {
+      "client_id": "bench-241",
+      "query_index": 241,
+      "start_epoch_ns": 1788091152172191000,
+      "ready_epoch_ns": 1788091156114861800,
+      "start_offset_from_python_release_ms": 61.277794,
+      "client_release_to_start_ms": 0.2852,
+      "ready_ms": 3942.6708
+    },
+    {
+      "client_id": "bench-170",
+      "query_index": 170,
+      "start_epoch_ns": 1788091152172429300,
+      "ready_epoch_ns": 1788091155804938500,
+      "start_offset_from_python_release_ms": 61.516094,
+      "client_release_to_start_ms": 0.3366,
+      "ready_ms": 3632.5092
+    },
+    {
+      "client_id": "bench-130",
+      "query_index": 130,
+      "start_epoch_ns": 1788091152172496600,
+      "ready_epoch_ns": 1788091156318856700,
+      "start_offset_from_python_release_ms": 61.583394,
+      "client_release_to_start_ms": 0.341,
+      "ready_ms": 4146.3601
+    },
+    {
+      "client_id": "bench-211",
+      "query_index": 211,
+      "start_epoch_ns": 1788091152172585200,
+      "ready_epoch_ns": 1788091156498949000,
+      "start_offset_from_python_release_ms": 61.671994,
+      "client_release_to_start_ms": 0.3008,
+      "ready_ms": 4326.3638
+    },
+    {
+      "client_id": "bench-123",
+      "query_index": 123,
+      "start_epoch_ns": 1788091152172656600,
+      "ready_epoch_ns": 1788091155593837300,
+      "start_offset_from_python_release_ms": 61.743394,
+      "client_release_to_start_ms": 0.249,
+      "ready_ms": 3421.1807
+    },
+    {
+      "client_id": "bench-73",
+      "query_index": 73,
+      "start_epoch_ns": 1788091152174135800,
+      "ready_epoch_ns": 1788091156413647600,
+      "start_offset_from_python_release_ms": 63.222594,
+      "client_release_to_start_ms": 0.2296,
+      "ready_ms": 4239.5118
+    },
+    {
+      "client_id": "bench-207",
+      "query_index": 207,
+      "start_epoch_ns": 1788091152174310100,
+      "ready_epoch_ns": 1788091154832316400,
+      "start_offset_from_python_release_ms": 63.396894,
+      "client_release_to_start_ms": 0.2931,
+      "ready_ms": 2658.0063
+    },
+    {
+      "client_id": "bench-209",
+      "query_index": 209,
+      "start_epoch_ns": 1788091152176035000,
+      "ready_epoch_ns": 1788091155034596900,
+      "start_offset_from_python_release_ms": 65.121794,
+      "client_release_to_start_ms": 0.2946,
+      "ready_ms": 2858.5619
+    },
+    {
+      "client_id": "bench-36",
+      "query_index": 36,
+      "start_epoch_ns": 1788091152176150300,
+      "ready_epoch_ns": 1788091156530894300,
+      "start_offset_from_python_release_ms": 65.237094,
+      "client_release_to_start_ms": 27.3743,
+      "ready_ms": 4354.744
+    },
+    {
+      "client_id": "bench-224",
+      "query_index": 224,
+      "start_epoch_ns": 1788091152176392700,
+      "ready_epoch_ns": 1788091156067549000,
+      "start_offset_from_python_release_ms": 65.479494,
+      "client_release_to_start_ms": 0.2452,
+      "ready_ms": 3891.1563
+    },
+    {
+      "client_id": "bench-240",
+      "query_index": 240,
+      "start_epoch_ns": 1788091152178315300,
+      "ready_epoch_ns": 1788091156164777700,
+      "start_offset_from_python_release_ms": 67.402094,
+      "client_release_to_start_ms": 0.2425,
+      "ready_ms": 3986.4624
+    },
+    {
+      "client_id": "bench-248",
+      "query_index": 248,
+      "start_epoch_ns": 1788091152178425900,
+      "ready_epoch_ns": 1788091155737630700,
+      "start_offset_from_python_release_ms": 67.512694,
+      "client_release_to_start_ms": 0.3441,
+      "ready_ms": 3559.2048
+    },
+    {
+      "client_id": "bench-238",
+      "query_index": 238,
+      "start_epoch_ns": 1788091152178805000,
+      "ready_epoch_ns": 1788091156220803600,
+      "start_offset_from_python_release_ms": 67.891794,
+      "client_release_to_start_ms": 0.2296,
+      "ready_ms": 4041.9986
+    },
+    {
+      "client_id": "bench-197",
+      "query_index": 197,
+      "start_epoch_ns": 1788091152179817700,
+      "ready_epoch_ns": 1788091155639394300,
+      "start_offset_from_python_release_ms": 68.904494,
+      "client_release_to_start_ms": 0.3241,
+      "ready_ms": 3459.5766
+    },
+    {
+      "client_id": "bench-175",
+      "query_index": 175,
+      "start_epoch_ns": 1788091152180232400,
+      "ready_epoch_ns": 1788091156623138800,
+      "start_offset_from_python_release_ms": 69.319194,
+      "client_release_to_start_ms": 0.301,
+      "ready_ms": 4442.9064
+    },
+    {
+      "client_id": "bench-95",
+      "query_index": 95,
+      "start_epoch_ns": 1788091152180525600,
+      "ready_epoch_ns": 1788091156656734000,
+      "start_offset_from_python_release_ms": 69.612394,
+      "client_release_to_start_ms": 0.2908,
+      "ready_ms": 4476.2084
+    },
+    {
+      "client_id": "bench-163",
+      "query_index": 163,
+      "start_epoch_ns": 1788091152180608000,
+      "ready_epoch_ns": 1788091156044067600,
+      "start_offset_from_python_release_ms": 69.694794,
+      "client_release_to_start_ms": 0.303,
+      "ready_ms": 3863.4596
+    },
+    {
+      "client_id": "bench-115",
+      "query_index": 115,
+      "start_epoch_ns": 1788091152180786700,
+      "ready_epoch_ns": 1788091156515576000,
+      "start_offset_from_python_release_ms": 69.873494,
+      "client_release_to_start_ms": 0.243,
+      "ready_ms": 4334.7893
+    },
+    {
+      "client_id": "bench-134",
+      "query_index": 134,
+      "start_epoch_ns": 1788091152180956400,
+      "ready_epoch_ns": 1788091156407387000,
+      "start_offset_from_python_release_ms": 70.043194,
+      "client_release_to_start_ms": 0.2972,
+      "ready_ms": 4226.4306
+    },
+    {
+      "client_id": "bench-229",
+      "query_index": 229,
+      "start_epoch_ns": 1788091152181120800,
+      "ready_epoch_ns": 1788091154911852500,
+      "start_offset_from_python_release_ms": 70.207594,
+      "client_release_to_start_ms": 0.2914,
+      "ready_ms": 2730.7317
+    },
+    {
+      "client_id": "bench-174",
+      "query_index": 174,
+      "start_epoch_ns": 1788091152181615400,
+      "ready_epoch_ns": 1788091156596778800,
+      "start_offset_from_python_release_ms": 70.702194,
+      "client_release_to_start_ms": 0.2874,
+      "ready_ms": 4415.1634
+    },
+    {
+      "client_id": "bench-242",
+      "query_index": 242,
+      "start_epoch_ns": 1788091152182127000,
+      "ready_epoch_ns": 1788091156234496300,
+      "start_offset_from_python_release_ms": 71.213794,
+      "client_release_to_start_ms": 0.2218,
+      "ready_ms": 4052.3693
+    },
+    {
+      "client_id": "bench-182",
+      "query_index": 182,
+      "start_epoch_ns": 1788091152183148300,
+      "ready_epoch_ns": 1788091156396151800,
+      "start_offset_from_python_release_ms": 72.235094,
+      "client_release_to_start_ms": 0.3146,
+      "ready_ms": 4213.0035
+    },
+    {
+      "client_id": "bench-148",
+      "query_index": 148,
+      "start_epoch_ns": 1788091152183676200,
+      "ready_epoch_ns": 1788091156634358000,
+      "start_offset_from_python_release_ms": 72.762994,
+      "client_release_to_start_ms": 0.2972,
+      "ready_ms": 4450.6818
+    },
+    {
+      "client_id": "bench-157",
+      "query_index": 157,
+      "start_epoch_ns": 1788091152184445000,
+      "ready_epoch_ns": 1788091156249844500,
+      "start_offset_from_python_release_ms": 73.531794,
+      "client_release_to_start_ms": 0.2924,
+      "ready_ms": 4065.3995
+    },
+    {
+      "client_id": "bench-214",
+      "query_index": 214,
+      "start_epoch_ns": 1788091152184478700,
+      "ready_epoch_ns": 1788091156147800800,
+      "start_offset_from_python_release_ms": 73.565494,
+      "client_release_to_start_ms": 0.3123,
+      "ready_ms": 3963.3221
+    },
+    {
+      "client_id": "bench-216",
+      "query_index": 216,
+      "start_epoch_ns": 1788091152184566000,
+      "ready_epoch_ns": 1788091155827156000,
+      "start_offset_from_python_release_ms": 73.652794,
+      "client_release_to_start_ms": 0.2928,
+      "ready_ms": 3642.59
+    },
+    {
+      "client_id": "bench-184",
+      "query_index": 184,
+      "start_epoch_ns": 1788091152184750600,
+      "ready_epoch_ns": 1788091156048168400,
+      "start_offset_from_python_release_ms": 73.837394,
+      "client_release_to_start_ms": 0.2821,
+      "ready_ms": 3863.4178
+    },
+    {
+      "client_id": "bench-210",
+      "query_index": 210,
+      "start_epoch_ns": 1788091152185281800,
+      "ready_epoch_ns": 1788091156650955300,
+      "start_offset_from_python_release_ms": 74.368594,
+      "client_release_to_start_ms": 0.3046,
+      "ready_ms": 4465.6735
+    },
+    {
+      "client_id": "bench-194",
+      "query_index": 194,
+      "start_epoch_ns": 1788091152185490700,
+      "ready_epoch_ns": 1788091156366832000,
+      "start_offset_from_python_release_ms": 74.577494,
+      "client_release_to_start_ms": 0.2391,
+      "ready_ms": 4181.3413
+    },
+    {
+      "client_id": "bench-154",
+      "query_index": 154,
+      "start_epoch_ns": 1788091152187484000,
+      "ready_epoch_ns": 1788091156595457000,
+      "start_offset_from_python_release_ms": 76.570794,
+      "client_release_to_start_ms": 0.345,
+      "ready_ms": 4407.973
+    },
+    {
+      "client_id": "bench-168",
+      "query_index": 168,
+      "start_epoch_ns": 1788091152187759900,
+      "ready_epoch_ns": 1788091156229036000,
+      "start_offset_from_python_release_ms": 76.846694,
+      "client_release_to_start_ms": 0.3459,
+      "ready_ms": 4041.2761
+    },
+    {
+      "client_id": "bench-144",
+      "query_index": 144,
+      "start_epoch_ns": 1788091152188555000,
+      "ready_epoch_ns": 1788091156247808000,
+      "start_offset_from_python_release_ms": 77.641794,
+      "client_release_to_start_ms": 0.291,
+      "ready_ms": 4059.253
+    },
+    {
+      "client_id": "bench-152",
+      "query_index": 152,
+      "start_epoch_ns": 1788091152188561700,
+      "ready_epoch_ns": 1788091156526243000,
+      "start_offset_from_python_release_ms": 77.648494,
+      "client_release_to_start_ms": 0.3264,
+      "ready_ms": 4337.6813
+    },
+    {
+      "client_id": "bench-191",
+      "query_index": 191,
+      "start_epoch_ns": 1788091152188588300,
+      "ready_epoch_ns": 1788091156248375000,
+      "start_offset_from_python_release_ms": 77.675094,
+      "client_release_to_start_ms": 0.3228,
+      "ready_ms": 4059.7867
+    },
+    {
+      "client_id": "bench-101",
+      "query_index": 101,
+      "start_epoch_ns": 1788091152188618500,
+      "ready_epoch_ns": 1788091156424745700,
+      "start_offset_from_python_release_ms": 77.705294,
+      "client_release_to_start_ms": 0.3256,
+      "ready_ms": 4236.1272
+    },
+    {
+      "client_id": "bench-202",
+      "query_index": 202,
+      "start_epoch_ns": 1788091152190788400,
+      "ready_epoch_ns": 1788091156356814800,
+      "start_offset_from_python_release_ms": 79.875194,
+      "client_release_to_start_ms": 0.2724,
+      "ready_ms": 4166.0264
+    },
+    {
+      "client_id": "bench-136",
+      "query_index": 136,
+      "start_epoch_ns": 1788091152192407600,
+      "ready_epoch_ns": 1788091154997743400,
+      "start_offset_from_python_release_ms": 81.494394,
+      "client_release_to_start_ms": 0.3241,
+      "ready_ms": 2805.3358
+    },
+    {
+      "client_id": "bench-203",
+      "query_index": 203,
+      "start_epoch_ns": 1788091152192551200,
+      "ready_epoch_ns": 1788091155055778600,
+      "start_offset_from_python_release_ms": 81.637994,
+      "client_release_to_start_ms": 0.3019,
+      "ready_ms": 2863.2274
+    },
+    {
+      "client_id": "bench-244",
+      "query_index": 244,
+      "start_epoch_ns": 1788091152192577000,
+      "ready_epoch_ns": 1788091156262458600,
+      "start_offset_from_python_release_ms": 81.663794,
+      "client_release_to_start_ms": 0.2555,
+      "ready_ms": 4069.8816
+    },
+    {
+      "client_id": "bench-232",
+      "query_index": 232,
+      "start_epoch_ns": 1788091152192580000,
+      "ready_epoch_ns": 1788091156498960400,
+      "start_offset_from_python_release_ms": 81.666794,
+      "client_release_to_start_ms": 0.2876,
+      "ready_ms": 4306.3804
+    },
+    {
+      "client_id": "bench-181",
+      "query_index": 181,
+      "start_epoch_ns": 1788091152192889900,
+      "ready_epoch_ns": 1788091155850767000,
+      "start_offset_from_python_release_ms": 81.976694,
+      "client_release_to_start_ms": 0.3309,
+      "ready_ms": 3657.8771
+    },
+    {
+      "client_id": "bench-231",
+      "query_index": 231,
+      "start_epoch_ns": 1788091152195593200,
+      "ready_epoch_ns": 1788091156567507200,
+      "start_offset_from_python_release_ms": 84.679994,
+      "client_release_to_start_ms": 0.3297,
+      "ready_ms": 4371.914
+    },
+    {
+      "client_id": "bench-237",
+      "query_index": 237,
+      "start_epoch_ns": 1788091152196349200,
+      "ready_epoch_ns": 1788091156415694800,
+      "start_offset_from_python_release_ms": 85.435994,
+      "client_release_to_start_ms": 0.2872,
+      "ready_ms": 4219.3456
+    },
+    {
+      "client_id": "bench-234",
+      "query_index": 234,
+      "start_epoch_ns": 1788091152196530700,
+      "ready_epoch_ns": 1788091155540124200,
+      "start_offset_from_python_release_ms": 85.617494,
+      "client_release_to_start_ms": 0.329,
+      "ready_ms": 3343.5935
+    },
+    {
+      "client_id": "bench-228",
+      "query_index": 228,
+      "start_epoch_ns": 1788091152196534000,
+      "ready_epoch_ns": 1788091156204884200,
+      "start_offset_from_python_release_ms": 85.620794,
+      "client_release_to_start_ms": 0.297,
+      "ready_ms": 4008.3502
+    },
+    {
+      "client_id": "bench-146",
+      "query_index": 146,
+      "start_epoch_ns": 1788091152196569600,
+      "ready_epoch_ns": 1788091156486597400,
+      "start_offset_from_python_release_ms": 85.656394,
+      "client_release_to_start_ms": 0.3006,
+      "ready_ms": 4290.0278
+    },
+    {
+      "client_id": "bench-24",
+      "query_index": 24,
+      "start_epoch_ns": 1788091152196709400,
+      "ready_epoch_ns": 1788091156459682300,
+      "start_offset_from_python_release_ms": 85.796194,
+      "client_release_to_start_ms": 0.2742,
+      "ready_ms": 4262.9729
+    },
+    {
+      "client_id": "bench-233",
+      "query_index": 233,
+      "start_epoch_ns": 1788091152199036200,
+      "ready_epoch_ns": 1788091155582389000,
+      "start_offset_from_python_release_ms": 88.122994,
+      "client_release_to_start_ms": 0.2468,
+      "ready_ms": 3383.3528
+    },
+    {
+      "client_id": "bench-195",
+      "query_index": 195,
+      "start_epoch_ns": 1788091152199312100,
+      "ready_epoch_ns": 1788091155475029200,
+      "start_offset_from_python_release_ms": 88.398894,
+      "client_release_to_start_ms": 0.2324,
+      "ready_ms": 3275.7171
+    },
+    {
+      "client_id": "bench-219",
+      "query_index": 219,
+      "start_epoch_ns": 1788091152200334800,
+      "ready_epoch_ns": 1788091156315603700,
+      "start_offset_from_python_release_ms": 89.421594,
+      "client_release_to_start_ms": 0.227,
+      "ready_ms": 4115.2689
+    },
+    {
+      "client_id": "bench-135",
+      "query_index": 135,
+      "start_epoch_ns": 1788091152200411100,
+      "ready_epoch_ns": 1788091156590036200,
+      "start_offset_from_python_release_ms": 89.497894,
+      "client_release_to_start_ms": 0.2629,
+      "ready_ms": 4389.6251
+    },
+    {
+      "client_id": "bench-132",
+      "query_index": 132,
+      "start_epoch_ns": 1788091152200615000,
+      "ready_epoch_ns": 1788091155305147100,
+      "start_offset_from_python_release_ms": 89.701794,
+      "client_release_to_start_ms": 0.3186,
+      "ready_ms": 3104.5321
+    },
+    {
+      "client_id": "bench-204",
+      "query_index": 204,
+      "start_epoch_ns": 1788091152200626700,
+      "ready_epoch_ns": 1788091155449059000,
+      "start_offset_from_python_release_ms": 89.713494,
+      "client_release_to_start_ms": 0.3448,
+      "ready_ms": 3248.4323
+    },
+    {
+      "client_id": "bench-247",
+      "query_index": 247,
+      "start_epoch_ns": 1788091152201073400,
+      "ready_epoch_ns": 1788091155960354800,
+      "start_offset_from_python_release_ms": 90.160194,
+      "client_release_to_start_ms": 0.2539,
+      "ready_ms": 3759.2814
+    },
+    {
+      "client_id": "bench-215",
+      "query_index": 215,
+      "start_epoch_ns": 1788091152201188000,
+      "ready_epoch_ns": 1788091155086124800,
+      "start_offset_from_python_release_ms": 90.274794,
+      "client_release_to_start_ms": 0.3074,
+      "ready_ms": 2884.9368
+    },
+    {
+      "client_id": "bench-103",
+      "query_index": 103,
+      "start_epoch_ns": 1788091152202361600,
+      "ready_epoch_ns": 1788091156468883000,
+      "start_offset_from_python_release_ms": 91.448394,
+      "client_release_to_start_ms": 0.286,
+      "ready_ms": 4266.5214
+    },
+    {
+      "client_id": "bench-176",
+      "query_index": 176,
+      "start_epoch_ns": 1788091152202619100,
+      "ready_epoch_ns": 1788091156605771000,
+      "start_offset_from_python_release_ms": 91.705894,
+      "client_release_to_start_ms": 0.2581,
+      "ready_ms": 4403.1519
+    },
+    {
+      "client_id": "bench-121",
+      "query_index": 121,
+      "start_epoch_ns": 1788091152204098600,
+      "ready_epoch_ns": 1788091155759514000,
+      "start_offset_from_python_release_ms": 93.185394,
+      "client_release_to_start_ms": 15.902,
+      "ready_ms": 3555.4154
+    },
+    {
+      "client_id": "bench-223",
+      "query_index": 223,
+      "start_epoch_ns": 1788091152204552400,
+      "ready_epoch_ns": 1788091155883578600,
+      "start_offset_from_python_release_ms": 93.639194,
+      "client_release_to_start_ms": 0.3048,
+      "ready_ms": 3679.0262
+    },
+    {
+      "client_id": "bench-190",
+      "query_index": 190,
+      "start_epoch_ns": 1788091152204620300,
+      "ready_epoch_ns": 1788091155130620700,
+      "start_offset_from_python_release_ms": 93.707094,
+      "client_release_to_start_ms": 0.3085,
+      "ready_ms": 2926.0004
+    },
+    {
+      "client_id": "bench-235",
+      "query_index": 235,
+      "start_epoch_ns": 1788091152204810000,
+      "ready_epoch_ns": 1788091155778612200,
+      "start_offset_from_python_release_ms": 93.896794,
+      "client_release_to_start_ms": 0.3497,
+      "ready_ms": 3573.8022
+    },
+    {
+      "client_id": "bench-225",
+      "query_index": 225,
+      "start_epoch_ns": 1788091152204864300,
+      "ready_epoch_ns": 1788091156627272000,
+      "start_offset_from_python_release_ms": 93.951094,
+      "client_release_to_start_ms": 0.2868,
+      "ready_ms": 4422.4077
+    },
+    {
+      "client_id": "bench-188",
+      "query_index": 188,
+      "start_epoch_ns": 1788091152205891800,
+      "ready_epoch_ns": 1788091155003271700,
+      "start_offset_from_python_release_ms": 94.978594,
+      "client_release_to_start_ms": 1.6808,
+      "ready_ms": 2797.3799
+    },
+    {
+      "client_id": "bench-198",
+      "query_index": 198,
+      "start_epoch_ns": 1788091152207725300,
+      "ready_epoch_ns": 1788091156442959000,
+      "start_offset_from_python_release_ms": 96.812094,
+      "client_release_to_start_ms": 0.3008,
+      "ready_ms": 4235.2337
+    },
+    {
+      "client_id": "bench-243",
+      "query_index": 243,
+      "start_epoch_ns": 1788091152208152800,
+      "ready_epoch_ns": 1788091156147142100,
+      "start_offset_from_python_release_ms": 97.239594,
+      "client_release_to_start_ms": 0.2406,
+      "ready_ms": 3938.9893
+    },
+    {
+      "client_id": "bench-155",
+      "query_index": 155,
+      "start_epoch_ns": 1788091152208178700,
+      "ready_epoch_ns": 1788091156192233700,
+      "start_offset_from_python_release_ms": 97.265494,
+      "client_release_to_start_ms": 0.3227,
+      "ready_ms": 3984.055
+    },
+    {
+      "client_id": "bench-230",
+      "query_index": 230,
+      "start_epoch_ns": 1788091152209156900,
+      "ready_epoch_ns": 1788091155877895400,
+      "start_offset_from_python_release_ms": 98.243694,
+      "client_release_to_start_ms": 0.3249,
+      "ready_ms": 3668.7385
+    },
+    {
+      "client_id": "bench-218",
+      "query_index": 218,
+      "start_epoch_ns": 1788091152210210800,
+      "ready_epoch_ns": 1788091156537752800,
+      "start_offset_from_python_release_ms": 99.297594,
+      "client_release_to_start_ms": 0.2836,
+      "ready_ms": 4327.542
+    },
+    {
+      "client_id": "bench-196",
+      "query_index": 196,
+      "start_epoch_ns": 1788091152212569600,
+      "ready_epoch_ns": 1788091155729280300,
+      "start_offset_from_python_release_ms": 101.656394,
+      "client_release_to_start_ms": 0.3244,
+      "ready_ms": 3516.7107
+    },
+    {
+      "client_id": "bench-213",
+      "query_index": 213,
+      "start_epoch_ns": 1788091152213010000,
+      "ready_epoch_ns": 1788091155361078300,
+      "start_offset_from_python_release_ms": 102.096794,
+      "client_release_to_start_ms": 0.294,
+      "ready_ms": 3148.0683
+    },
+    {
+      "client_id": "bench-206",
+      "query_index": 206,
+      "start_epoch_ns": 1788091152214525200,
+      "ready_epoch_ns": 1788091155965547300,
+      "start_offset_from_python_release_ms": 103.611994,
+      "client_release_to_start_ms": 0.3088,
+      "ready_ms": 3751.0221
+    },
+    {
+      "client_id": "bench-226",
+      "query_index": 226,
+      "start_epoch_ns": 1788091152216507400,
+      "ready_epoch_ns": 1788091156135773400,
+      "start_offset_from_python_release_ms": 105.594194,
+      "client_release_to_start_ms": 0.2465,
+      "ready_ms": 3919.266
+    },
+    {
+      "client_id": "bench-104",
+      "query_index": 104,
+      "start_epoch_ns": 1788091152217324800,
+      "ready_epoch_ns": 1788091156587557000,
+      "start_offset_from_python_release_ms": 106.411594,
+      "client_release_to_start_ms": 0.3082,
+      "ready_ms": 4370.2322
+    },
+    {
+      "client_id": "bench-138",
+      "query_index": 138,
+      "start_epoch_ns": 1788091152217525800,
+      "ready_epoch_ns": 1788091156403325200,
+      "start_offset_from_python_release_ms": 106.612594,
+      "client_release_to_start_ms": 0.3378,
+      "ready_ms": 4185.7994
+    },
+    {
+      "client_id": "bench-201",
+      "query_index": 201,
+      "start_epoch_ns": 1788091152218304000,
+      "ready_epoch_ns": 1788091155641014300,
+      "start_offset_from_python_release_ms": 107.390794,
+      "client_release_to_start_ms": 0.215,
+      "ready_ms": 3422.7103
+    },
+    {
+      "client_id": "bench-133",
+      "query_index": 133,
+      "start_epoch_ns": 1788091152220200400,
+      "ready_epoch_ns": 1788091155114137900,
+      "start_offset_from_python_release_ms": 109.287194,
+      "client_release_to_start_ms": 0.3334,
+      "ready_ms": 2893.9375
+    },
+    {
+      "client_id": "bench-246",
+      "query_index": 246,
+      "start_epoch_ns": 1788091152220316400,
+      "ready_epoch_ns": 1788091156169107000,
+      "start_offset_from_python_release_ms": 109.403194,
+      "client_release_to_start_ms": 0.2327,
+      "ready_ms": 3948.7906
+    },
+    {
+      "client_id": "bench-220",
+      "query_index": 220,
+      "start_epoch_ns": 1788091152220373000,
+      "ready_epoch_ns": 1788091155432118500,
+      "start_offset_from_python_release_ms": 109.459794,
+      "client_release_to_start_ms": 0.244,
+      "ready_ms": 3211.7455
+    },
+    {
+      "client_id": "bench-61",
+      "query_index": 61,
+      "start_epoch_ns": 1788091152220697900,
+      "ready_epoch_ns": 1788091155891939000,
+      "start_offset_from_python_release_ms": 109.784694,
+      "client_release_to_start_ms": 0.2959,
+      "ready_ms": 3671.2411
+    },
+    {
+      "client_id": "bench-227",
+      "query_index": 227,
+      "start_epoch_ns": 1788091152221438000,
+      "ready_epoch_ns": 1788091155578838800,
+      "start_offset_from_python_release_ms": 110.524794,
+      "client_release_to_start_ms": 0.2799,
+      "ready_ms": 3357.4008
+    },
+    {
+      "client_id": "bench-50",
+      "query_index": 50,
+      "start_epoch_ns": 1788091152222213400,
+      "ready_epoch_ns": 1788091155937503500,
+      "start_offset_from_python_release_ms": 111.300194,
+      "client_release_to_start_ms": 1.9382,
+      "ready_ms": 3715.2901
+    },
+    {
+      "client_id": "bench-217",
+      "query_index": 217,
+      "start_epoch_ns": 1788091152222479600,
+      "ready_epoch_ns": 1788091155833412000,
+      "start_offset_from_python_release_ms": 111.566394,
+      "client_release_to_start_ms": 0.3131,
+      "ready_ms": 3610.9324
+    },
+    {
+      "client_id": "bench-222",
+      "query_index": 222,
+      "start_epoch_ns": 1788091152223670800,
+      "ready_epoch_ns": 1788091155653952500,
+      "start_offset_from_python_release_ms": 112.757594,
+      "client_release_to_start_ms": 0.3558,
+      "ready_ms": 3430.2817
+    },
+    {
+      "client_id": "bench-212",
+      "query_index": 212,
+      "start_epoch_ns": 1788091152224383700,
+      "ready_epoch_ns": 1788091155168181200,
+      "start_offset_from_python_release_ms": 113.470494,
+      "client_release_to_start_ms": 0.2961,
+      "ready_ms": 2943.7975
+    },
+    {
+      "client_id": "bench-199",
+      "query_index": 199,
+      "start_epoch_ns": 1788091152228226600,
+      "ready_epoch_ns": 1788091155235443200,
+      "start_offset_from_python_release_ms": 117.313394,
+      "client_release_to_start_ms": 0.3638,
+      "ready_ms": 3007.2166
+    },
+    {
+      "client_id": "bench-117",
+      "query_index": 117,
+      "start_epoch_ns": 1788091152228561200,
+      "ready_epoch_ns": 1788091155663213000,
+      "start_offset_from_python_release_ms": 117.647994,
+      "client_release_to_start_ms": 0.3257,
+      "ready_ms": 3434.6518
+    },
+    {
+      "client_id": "bench-145",
+      "query_index": 145,
+      "start_epoch_ns": 1788091152228664000,
+      "ready_epoch_ns": 1788091156582847200,
+      "start_offset_from_python_release_ms": 117.750794,
+      "client_release_to_start_ms": 0.2892,
+      "ready_ms": 4354.1832
+    },
+    {
+      "client_id": "bench-64",
+      "query_index": 64,
+      "start_epoch_ns": 1788091152229027600,
+      "ready_epoch_ns": 1788091156760977400,
+      "start_offset_from_python_release_ms": 118.114394,
+      "client_release_to_start_ms": 0.2473,
+      "ready_ms": 4531.9498
+    },
+    {
+      "client_id": "bench-113",
+      "query_index": 113,
+      "start_epoch_ns": 1788091152232357000,
+      "ready_epoch_ns": 1788091156447921700,
+      "start_offset_from_python_release_ms": 121.443794,
+      "client_release_to_start_ms": 0.3345,
+      "ready_ms": 4215.5647
+    },
+    {
+      "client_id": "bench-65",
+      "query_index": 65,
+      "start_epoch_ns": 1788091152232937700,
+      "ready_epoch_ns": 1788091156109772800,
+      "start_offset_from_python_release_ms": 122.024494,
+      "client_release_to_start_ms": 6.5636,
+      "ready_ms": 3876.8351
+    },
+    {
+      "client_id": "bench-158",
+      "query_index": 158,
+      "start_epoch_ns": 1788091152233686300,
+      "ready_epoch_ns": 1788091155527063000,
+      "start_offset_from_python_release_ms": 122.773094,
+      "client_release_to_start_ms": 0.3848,
+      "ready_ms": 3293.3767
+    },
+    {
+      "client_id": "bench-105",
+      "query_index": 105,
+      "start_epoch_ns": 1788091152236900900,
+      "ready_epoch_ns": 1788091156670540300,
+      "start_offset_from_python_release_ms": 125.987694,
+      "client_release_to_start_ms": 0.2781,
+      "ready_ms": 4433.6394
+    },
+    {
+      "client_id": "bench-161",
+      "query_index": 161,
+      "start_epoch_ns": 1788091152238548700,
+      "ready_epoch_ns": 1788091155843096000,
+      "start_offset_from_python_release_ms": 127.635494,
+      "client_release_to_start_ms": 0.3663,
+      "ready_ms": 3604.5473
+    },
+    {
+      "client_id": "bench-159",
+      "query_index": 159,
+      "start_epoch_ns": 1788091152240280600,
+      "ready_epoch_ns": 1788091156705196300,
+      "start_offset_from_python_release_ms": 129.367394,
+      "client_release_to_start_ms": 0.3396,
+      "ready_ms": 4464.9157
+    },
+    {
+      "client_id": "bench-47",
+      "query_index": 47,
+      "start_epoch_ns": 1788091152241032200,
+      "ready_epoch_ns": 1788091156745953000,
+      "start_offset_from_python_release_ms": 130.118994,
+      "client_release_to_start_ms": 45.3266,
+      "ready_ms": 4504.9208
+    },
+    {
+      "client_id": "bench-71",
+      "query_index": 71,
+      "start_epoch_ns": 1788091152241036000,
+      "ready_epoch_ns": 1788091156663909400,
+      "start_offset_from_python_release_ms": 130.122794,
+      "client_release_to_start_ms": 0.2662,
+      "ready_ms": 4422.8734
+    },
+    {
+      "client_id": "bench-186",
+      "query_index": 186,
+      "start_epoch_ns": 1788091152241036000,
+      "ready_epoch_ns": 1788091155574469000,
+      "start_offset_from_python_release_ms": 130.122794,
+      "client_release_to_start_ms": 0.323,
+      "ready_ms": 3333.433
+    },
+    {
+      "client_id": "bench-205",
+      "query_index": 205,
+      "start_epoch_ns": 1788091152241259000,
+      "ready_epoch_ns": 1788091155481457200,
+      "start_offset_from_python_release_ms": 130.345794,
+      "client_release_to_start_ms": 0.3261,
+      "ready_ms": 3240.1982
+    },
+    {
+      "client_id": "bench-208",
+      "query_index": 208,
+      "start_epoch_ns": 1788091152244756200,
+      "ready_epoch_ns": 1788091155814072800,
+      "start_offset_from_python_release_ms": 133.842994,
+      "client_release_to_start_ms": 0.3387,
+      "ready_ms": 3569.3166
+    },
+    {
+      "client_id": "bench-29",
+      "query_index": 29,
+      "start_epoch_ns": 1788091152244786000,
+      "ready_epoch_ns": 1788091156683936000,
+      "start_offset_from_python_release_ms": 133.872794,
+      "client_release_to_start_ms": 0.2784,
+      "ready_ms": 4439.15
+    },
+    {
+      "client_id": "bench-93",
+      "query_index": 93,
+      "start_epoch_ns": 1788091152245405000,
+      "ready_epoch_ns": 1788091155361997800,
+      "start_offset_from_python_release_ms": 134.491794,
+      "client_release_to_start_ms": 0.3493,
+      "ready_ms": 3116.5928
+    },
+    {
+      "client_id": "bench-183",
+      "query_index": 183,
+      "start_epoch_ns": 1788091152246368000,
+      "ready_epoch_ns": 1788091156758956500,
+      "start_offset_from_python_release_ms": 135.454794,
+      "client_release_to_start_ms": 0.3328,
+      "ready_ms": 4512.5885
+    },
+    {
+      "client_id": "bench-249",
+      "query_index": 249,
+      "start_epoch_ns": 1788091152249013200,
+      "ready_epoch_ns": 1788091155851667500,
+      "start_offset_from_python_release_ms": 138.099994,
+      "client_release_to_start_ms": 0.3156,
+      "ready_ms": 3602.6543
+    },
+    {
+      "client_id": "bench-221",
+      "query_index": 221,
+      "start_epoch_ns": 1788091152249636600,
+      "ready_epoch_ns": 1788091156692953900,
+      "start_offset_from_python_release_ms": 138.723394,
+      "client_release_to_start_ms": 0.2783,
+      "ready_ms": 4443.3173
+    },
+    {
+      "client_id": "bench-189",
+      "query_index": 189,
+      "start_epoch_ns": 1788091152249773000,
+      "ready_epoch_ns": 1788091155043763700,
+      "start_offset_from_python_release_ms": 138.859794,
+      "client_release_to_start_ms": 0.3084,
+      "ready_ms": 2793.9907
+    },
+    {
+      "client_id": "bench-107",
+      "query_index": 107,
+      "start_epoch_ns": 1788091152250695400,
+      "ready_epoch_ns": 1788091155805631000,
+      "start_offset_from_python_release_ms": 139.782194,
+      "client_release_to_start_ms": 5.4518,
+      "ready_ms": 3554.9356
+    },
+    {
+      "client_id": "bench-142",
+      "query_index": 142,
+      "start_epoch_ns": 1788091152250915600,
+      "ready_epoch_ns": 1788091156058436000,
+      "start_offset_from_python_release_ms": 140.002394,
+      "client_release_to_start_ms": 10.0183,
+      "ready_ms": 3807.5204
+    },
+    {
+      "client_id": "bench-171",
+      "query_index": 171,
+      "start_epoch_ns": 1788091152251460400,
+      "ready_epoch_ns": 1788091156008251000,
+      "start_offset_from_python_release_ms": 140.547194,
+      "client_release_to_start_ms": 58.9469,
+      "ready_ms": 3756.7906
+    },
+    {
+      "client_id": "bench-33",
+      "query_index": 33,
+      "start_epoch_ns": 1788091152251617800,
+      "ready_epoch_ns": 1788091156766449000,
+      "start_offset_from_python_release_ms": 140.704594,
+      "client_release_to_start_ms": 35.468,
+      "ready_ms": 4514.8312
+    },
+    {
+      "client_id": "bench-91",
+      "query_index": 91,
+      "start_epoch_ns": 1788091152252257800,
+      "ready_epoch_ns": 1788091156723491600,
+      "start_offset_from_python_release_ms": 141.344594,
+      "client_release_to_start_ms": 4.7201,
+      "ready_ms": 4471.2338
+    },
+    {
+      "client_id": "bench-185",
+      "query_index": 185,
+      "start_epoch_ns": 1788091152254283000,
+      "ready_epoch_ns": 1788091155263523000,
+      "start_offset_from_python_release_ms": 143.369794,
+      "client_release_to_start_ms": 5.5437,
+      "ready_ms": 3009.24
+    },
+    {
+      "client_id": "bench-140",
+      "query_index": 140,
+      "start_epoch_ns": 1788091152254889200,
+      "ready_epoch_ns": 1788091156763147300,
+      "start_offset_from_python_release_ms": 143.975994,
+      "client_release_to_start_ms": 34.2862,
+      "ready_ms": 4508.2581
+    },
+    {
+      "client_id": "bench-102",
+      "query_index": 102,
+      "start_epoch_ns": 1788091152258606000,
+      "ready_epoch_ns": 1788091156738097000,
+      "start_offset_from_python_release_ms": 147.692794,
+      "client_release_to_start_ms": 16.4116,
+      "ready_ms": 4479.491
+    },
+    {
+      "client_id": "bench-187",
+      "query_index": 187,
+      "start_epoch_ns": 1788091152261046800,
+      "ready_epoch_ns": 1788091155945272300,
+      "start_offset_from_python_release_ms": 150.133594,
+      "client_release_to_start_ms": 0.3523,
+      "ready_ms": 3684.2255
+    },
+    {
+      "client_id": "bench-69",
+      "query_index": 69,
+      "start_epoch_ns": 1788091152262122800,
+      "ready_epoch_ns": 1788091155396750000,
+      "start_offset_from_python_release_ms": 151.209594,
+      "client_release_to_start_ms": 4.4314,
+      "ready_ms": 3134.6272
+    },
+    {
+      "client_id": "bench-166",
+      "query_index": 166,
+      "start_epoch_ns": 1788091152263208000,
+      "ready_epoch_ns": 1788091155790060800,
+      "start_offset_from_python_release_ms": 152.294794,
+      "client_release_to_start_ms": 23.1386,
+      "ready_ms": 3526.8528
+    },
+    {
+      "client_id": "bench-94",
+      "query_index": 94,
+      "start_epoch_ns": 1788091152265996300,
+      "ready_epoch_ns": 1788091155537173200,
+      "start_offset_from_python_release_ms": 155.083094,
+      "client_release_to_start_ms": 31.68,
+      "ready_ms": 3271.1769
+    },
+    {
+      "client_id": "bench-239",
+      "query_index": 239,
+      "start_epoch_ns": 1788091152269383400,
+      "ready_epoch_ns": 1788091156573532000,
+      "start_offset_from_python_release_ms": 158.470194,
+      "client_release_to_start_ms": 0.3138,
+      "ready_ms": 4304.1486
+    },
+    {
+      "client_id": "bench-79",
+      "query_index": 79,
+      "start_epoch_ns": 1788091152269855200,
+      "ready_epoch_ns": 1788091156770746600,
+      "start_offset_from_python_release_ms": 158.941994,
+      "client_release_to_start_ms": 18.5308,
+      "ready_ms": 4500.8914
+    },
+    {
+      "client_id": "bench-180",
+      "query_index": 180,
+      "start_epoch_ns": 1788091152275128800,
+      "ready_epoch_ns": 1788091155407515100,
+      "start_offset_from_python_release_ms": 164.215594,
+      "client_release_to_start_ms": 0.2816,
+      "ready_ms": 3132.3863
+    },
+    {
+      "client_id": "bench-156",
+      "query_index": 156,
+      "start_epoch_ns": 1788091152275515000,
+      "ready_epoch_ns": 1788091156655871200,
+      "start_offset_from_python_release_ms": 164.601794,
+      "client_release_to_start_ms": 0.3519,
+      "ready_ms": 4380.3562
+    },
+    {
+      "client_id": "bench-167",
+      "query_index": 167,
+      "start_epoch_ns": 1788091152276129000,
+      "ready_epoch_ns": 1788091155487193600,
+      "start_offset_from_python_release_ms": 165.215794,
+      "client_release_to_start_ms": 0.242,
+      "ready_ms": 3211.0646
+    },
+    {
+      "client_id": "bench-179",
+      "query_index": 179,
+      "start_epoch_ns": 1788091152279801300,
+      "ready_epoch_ns": 1788091155823676000,
+      "start_offset_from_python_release_ms": 168.888094,
+      "client_release_to_start_ms": 0.5941,
+      "ready_ms": 3543.8747
+    },
+    {
+      "client_id": "bench-147",
+      "query_index": 147,
+      "start_epoch_ns": 1788091152280482000,
+      "ready_epoch_ns": 1788091155917137700,
+      "start_offset_from_python_release_ms": 169.568794,
+      "client_release_to_start_ms": 0.3304,
+      "ready_ms": 3636.6557
+    },
+    {
+      "client_id": "bench-84",
+      "query_index": 84,
+      "start_epoch_ns": 1788091152285659600,
+      "ready_epoch_ns": 1788091155780347400,
+      "start_offset_from_python_release_ms": 174.746394,
+      "client_release_to_start_ms": 4.5532,
+      "ready_ms": 3494.6878
+    },
+    {
+      "client_id": "bench-92",
+      "query_index": 92,
+      "start_epoch_ns": 1788091152292990000,
+      "ready_epoch_ns": 1788091156105173800,
+      "start_offset_from_python_release_ms": 182.076794,
+      "client_release_to_start_ms": 18.3056,
+      "ready_ms": 3812.1838
+    },
+    {
+      "client_id": "bench-162",
+      "query_index": 162,
+      "start_epoch_ns": 1788091152293546500,
+      "ready_epoch_ns": 1788091156708529200,
+      "start_offset_from_python_release_ms": 182.633294,
+      "client_release_to_start_ms": 0.3341,
+      "ready_ms": 4414.9827
+    },
+    {
+      "client_id": "bench-15",
+      "query_index": 15,
+      "start_epoch_ns": 1788091152300590800,
+      "ready_epoch_ns": 1788091156747148300,
+      "start_offset_from_python_release_ms": 189.677594,
+      "client_release_to_start_ms": 10.7208,
+      "ready_ms": 4446.5575
+    },
+    {
+      "client_id": "bench-172",
+      "query_index": 172,
+      "start_epoch_ns": 1788091152308364000,
+      "ready_epoch_ns": 1788091156057923000,
+      "start_offset_from_python_release_ms": 197.450794,
+      "client_release_to_start_ms": 20.7634,
+      "ready_ms": 3749.559
+    },
+    {
+      "client_id": "bench-60",
+      "query_index": 60,
+      "start_epoch_ns": 1788091152322535000,
+      "ready_epoch_ns": 1788091156047934200,
+      "start_offset_from_python_release_ms": 211.621794,
+      "client_release_to_start_ms": 0.4314,
+      "ready_ms": 3725.3992
+    },
+    {
+      "client_id": "bench-236",
+      "query_index": 236,
+      "start_epoch_ns": 1788091152334474800,
+      "ready_epoch_ns": 1788091155992894500,
+      "start_offset_from_python_release_ms": 223.561594,
+      "client_release_to_start_ms": 0.317,
+      "ready_ms": 3658.4197
+    },
+    {
+      "client_id": "bench-109",
+      "query_index": 109,
+      "start_epoch_ns": 1788091152342800600,
+      "ready_epoch_ns": 1788091156733428500,
+      "start_offset_from_python_release_ms": 231.887394,
+      "client_release_to_start_ms": 15.9802,
+      "ready_ms": 4390.6279
+    }
+  ],
+  "errors": []
+}

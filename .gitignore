@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+*.bak
+*.bak_*
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/
+npm-debug.log*
+runs/
+.DS_Store
+Thumbs.db
+thesis/

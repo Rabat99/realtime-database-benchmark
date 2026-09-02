@@ -1,0 +1,1463 @@
+{
+  "system": "hasura",
+  "test": "subscription_init",
+  "subscribers": 150,
+  "clients": 150,
+  "queries_per_client": 1.0,
+  "query_class": "window",
+  "limit": 10,
+  "topics": 30000,
+  "barrier": true,
+  "measurement_definition": "graphql_subscription_start_to_first_complete",
+  "connection_definition": "Hasura WebSocket connection_ack before barrier arm",
+  "connected_client_count": 150,
+  "armed_client_count": 150,
+  "released_client_count": 150,
+  "query_started_count": 150,
+  "query_ready_event_count": 150,
+  "ready_count": 150,
+  "missing_ready_measurements": 0,
+  "ready_ms": {
+    "p50": 1099.0796325000001,
+    "p90": 1103.0182751,
+    "p95": 1104.0034796,
+    "min": 86.495897,
+    "max": 1105.318543,
+    "mean": 1085.24448418
+  },
+  "start_spread_ms": 5.877106,
+  "start_spread_ratio_to_p50": 0.00534729770820314,
+  "start_spread_diagnostic": {
+    "reference_ratio": 0.2,
+    "within_reference": true,
+    "validity_gate": false
+  },
+  "client_release_to_start_ms": {
+    "p50": 0.00198,
+    "p90": 0.003655,
+    "p95": 0.0042139999999999955,
+    "min": 0.00177,
+    "max": 0.01212,
+    "mean": 0.0024051333333333334
+  },
+  "python_release_to_start_ms": {
+    "p50": 3.3227325,
+    "p90": 5.544550099999999,
+    "p95": 5.82065605,
+    "min": 0.204995,
+    "max": 6.082101,
+    "mean": 3.3487346133333333
+  },
+  "batch": {
+    "release_to_first_start_ms": 0.204995,
+    "release_to_last_start_ms": 6.082101,
+    "release_to_first_ready_ms": 87.585898,
+    "release_to_last_ready_ms": 1106.27246,
+    "ready_span_ms": 1018.686562,
+    "completion_rate_per_s": 135.61559737226338
+  },
+  "concurrency": {
+    "peak_concurrent_hydrations": 150,
+    "time_weighted_mean_concurrency": 147.1760790170245,
+    "little_mean_concurrency": 147.1760790170245,
+    "wall_span_ms": 1106.067465
+  },
+  "harness": {
+    "max_loop_lag_ms": 0.7612999528646414,
+    "max_allowed_loop_lag_ms": 300.0,
+    "loop_lag_ms_per_client": {},
+    "loop_lag_scope": "single Python asyncio event loop hosting all Hasura WebSocket clients"
+  },
+  "observed_event_types": {
+    "connected": {
+      "count": 150,
+      "first_ns": 1788078441117864612,
+      "last_ns": 1788078441129150500
+    },
+    "armed": {
+      "count": 150,
+      "first_ns": 1788078441117887302,
+      "last_ns": 1788078441129164090
+    },
+    "released": {
+      "count": 150,
+      "first_ns": 1788078441379923440,
+      "last_ns": 1788078441385808856
+    },
+    "query-start": {
+      "count": 150,
+      "first_ns": 1788078441379933950,
+      "last_ns": 1788078441385811056
+    },
+    "query-ready": {
+      "count": 150,
+      "first_ns": 1788078441467314853,
+      "last_ns": 1788078442486001415
+    }
+  },
+  "valid": {
+    "all_clients_connected": true,
+    "all_clients_armed": true,
+    "all_clients_released": true,
+    "all_queries_started": true,
+    "all_queries_ready": true,
+    "no_client_errors": true,
+    "no_query_before_client_release": true,
+    "full_concurrency_observed": true,
+    "harness_loop_lag_ok": true
+  },
+  "valid_run": true,
+  "samples": [
+    {
+      "client_id": "hasura-35",
+      "query_index": 35,
+      "start_epoch_ns": 1788078441379933950,
+      "ready_epoch_ns": 1788078442483900155,
+      "start_offset_from_python_release_ms": 0.204995,
+      "client_release_to_start_ms": 0.01051,
+      "ready_ms": 1103.966205
+    },
+    {
+      "client_id": "hasura-58",
+      "query_index": 58,
+      "start_epoch_ns": 1788078441380075694,
+      "ready_epoch_ns": 1788078442485394237,
+      "start_offset_from_python_release_ms": 0.346739,
+      "client_release_to_start_ms": 0.00849,
+      "ready_ms": 1105.318543
+    },
+    {
+      "client_id": "hasura-67",
+      "query_index": 67,
+      "start_epoch_ns": 1788078441380151826,
+      "ready_epoch_ns": 1788078442478584075,
+      "start_offset_from_python_release_ms": 0.422871,
+      "client_release_to_start_ms": 0.00495,
+      "ready_ms": 1098.432249
+    },
+    {
+      "client_id": "hasura-57",
+      "query_index": 57,
+      "start_epoch_ns": 1788078441380211478,
+      "ready_epoch_ns": 1788078442482671380,
+      "start_offset_from_python_release_ms": 0.482523,
+      "client_release_to_start_ms": 0.00406,
+      "ready_ms": 1102.459902
+    },
+    {
+      "client_id": "hasura-0",
+      "query_index": 0,
+      "start_epoch_ns": 1788078441380265899,
+      "ready_epoch_ns": 1788078442483199416,
+      "start_offset_from_python_release_ms": 0.536944,
+      "client_release_to_start_ms": 0.00437,
+      "ready_ms": 1102.933517
+    },
+    {
+      "client_id": "hasura-1",
+      "query_index": 1,
+      "start_epoch_ns": 1788078441380333401,
+      "ready_epoch_ns": 1788078441467441707,
+      "start_offset_from_python_release_ms": 0.604446,
+      "client_release_to_start_ms": 0.00456,
+      "ready_ms": 87.108306
+    },
+    {
+      "client_id": "hasura-2",
+      "query_index": 2,
+      "start_epoch_ns": 1788078441380394813,
+      "ready_epoch_ns": 1788078442484041089,
+      "start_offset_from_python_release_ms": 0.665858,
+      "client_release_to_start_ms": 0.00365,
+      "ready_ms": 1103.646276
+    },
+    {
+      "client_id": "hasura-3",
+      "query_index": 3,
+      "start_epoch_ns": 1788078441380446724,
+      "ready_epoch_ns": 1788078442482808274,
+      "start_offset_from_python_release_ms": 0.717769,
+      "client_release_to_start_ms": 0.00349,
+      "ready_ms": 1102.36155
+    },
+    {
+      "client_id": "hasura-4",
+      "query_index": 4,
+      "start_epoch_ns": 1788078441380528688,
+      "ready_epoch_ns": 1788078442485809228,
+      "start_offset_from_python_release_ms": 0.799733,
+      "client_release_to_start_ms": 0.003891,
+      "ready_ms": 1105.28054
+    },
+    {
+      "client_id": "hasura-6",
+      "query_index": 6,
+      "start_epoch_ns": 1788078441380590858,
+      "ready_epoch_ns": 1788078442476488216,
+      "start_offset_from_python_release_ms": 0.861903,
+      "client_release_to_start_ms": 0.003529,
+      "ready_ms": 1095.897358
+    },
+    {
+      "client_id": "hasura-5",
+      "query_index": 5,
+      "start_epoch_ns": 1788078441380644520,
+      "ready_epoch_ns": 1788078442483793272,
+      "start_offset_from_python_release_ms": 0.915565,
+      "client_release_to_start_ms": 0.00434,
+      "ready_ms": 1103.148752
+    },
+    {
+      "client_id": "hasura-8",
+      "query_index": 8,
+      "start_epoch_ns": 1788078441380703341,
+      "ready_epoch_ns": 1788078442478945316,
+      "start_offset_from_python_release_ms": 0.974386,
+      "client_release_to_start_ms": 0.00382,
+      "ready_ms": 1098.241975
+    },
+    {
+      "client_id": "hasura-10",
+      "query_index": 10,
+      "start_epoch_ns": 1788078441380756374,
+      "ready_epoch_ns": 1788078442485893981,
+      "start_offset_from_python_release_ms": 1.027419,
+      "client_release_to_start_ms": 0.003831,
+      "ready_ms": 1105.137607
+    },
+    {
+      "client_id": "hasura-7",
+      "query_index": 7,
+      "start_epoch_ns": 1788078441380818956,
+      "ready_epoch_ns": 1788078441467314853,
+      "start_offset_from_python_release_ms": 1.090001,
+      "client_release_to_start_ms": 0.003851,
+      "ready_ms": 86.495897
+    },
+    {
+      "client_id": "hasura-9",
+      "query_index": 9,
+      "start_epoch_ns": 1788078441380869437,
+      "ready_epoch_ns": 1788078442483116603,
+      "start_offset_from_python_release_ms": 1.140482,
+      "client_release_to_start_ms": 0.003331,
+      "ready_ms": 1102.247166
+    },
+    {
+      "client_id": "hasura-11",
+      "query_index": 11,
+      "start_epoch_ns": 1788078441380930039,
+      "ready_epoch_ns": 1788078442480237281,
+      "start_offset_from_python_release_ms": 1.201084,
+      "client_release_to_start_ms": 0.0037,
+      "ready_ms": 1099.307242
+    },
+    {
+      "client_id": "hasura-12",
+      "query_index": 12,
+      "start_epoch_ns": 1788078441380989830,
+      "ready_epoch_ns": 1788078442484319547,
+      "start_offset_from_python_release_ms": 1.260875,
+      "client_release_to_start_ms": 0.00377,
+      "ready_ms": 1103.329717
+    },
+    {
+      "client_id": "hasura-13",
+      "query_index": 13,
+      "start_epoch_ns": 1788078441381041962,
+      "ready_epoch_ns": 1788078442485532981,
+      "start_offset_from_python_release_ms": 1.313007,
+      "client_release_to_start_ms": 0.00186,
+      "ready_ms": 1104.491019
+    },
+    {
+      "client_id": "hasura-50",
+      "query_index": 50,
+      "start_epoch_ns": 1788078441381074293,
+      "ready_epoch_ns": 1788078442476321281,
+      "start_offset_from_python_release_ms": 1.345338,
+      "client_release_to_start_ms": 0.0028,
+      "ready_ms": 1095.246988
+    },
+    {
+      "client_id": "hasura-34",
+      "query_index": 34,
+      "start_epoch_ns": 1788078441381111254,
+      "ready_epoch_ns": 1788078442485732686,
+      "start_offset_from_python_release_ms": 1.382299,
+      "client_release_to_start_ms": 0.00201,
+      "ready_ms": 1104.621432
+    },
+    {
+      "client_id": "hasura-75",
+      "query_index": 75,
+      "start_epoch_ns": 1788078441381141094,
+      "ready_epoch_ns": 1788078442475113467,
+      "start_offset_from_python_release_ms": 1.412139,
+      "client_release_to_start_ms": 0.00191,
+      "ready_ms": 1093.972373
+    },
+    {
+      "client_id": "hasura-76",
+      "query_index": 76,
+      "start_epoch_ns": 1788078441381177685,
+      "ready_epoch_ns": 1788078442483028160,
+      "start_offset_from_python_release_ms": 1.44873,
+      "client_release_to_start_ms": 0.00248,
+      "ready_ms": 1101.850475
+    },
+    {
+      "client_id": "hasura-77",
+      "query_index": 77,
+      "start_epoch_ns": 1788078441381209526,
+      "ready_epoch_ns": 1788078442482891146,
+      "start_offset_from_python_release_ms": 1.480571,
+      "client_release_to_start_ms": 0.00204,
+      "ready_ms": 1101.68162
+    },
+    {
+      "client_id": "hasura-78",
+      "query_index": 78,
+      "start_epoch_ns": 1788078441381237757,
+      "ready_epoch_ns": 1788078442485676955,
+      "start_offset_from_python_release_ms": 1.508802,
+      "client_release_to_start_ms": 0.00191,
+      "ready_ms": 1104.439198
+    },
+    {
+      "client_id": "hasura-79",
+      "query_index": 79,
+      "start_epoch_ns": 1788078441381274238,
+      "ready_epoch_ns": 1788078442476164766,
+      "start_offset_from_python_release_ms": 1.545283,
+      "client_release_to_start_ms": 0.00204,
+      "ready_ms": 1094.890528
+    },
+    {
+      "client_id": "hasura-81",
+      "query_index": 81,
+      "start_epoch_ns": 1788078441381304249,
+      "ready_epoch_ns": 1788078442478644167,
+      "start_offset_from_python_release_ms": 1.575294,
+      "client_release_to_start_ms": 0.00181,
+      "ready_ms": 1097.339918
+    },
+    {
+      "client_id": "hasura-80",
+      "query_index": 80,
+      "start_epoch_ns": 1788078441381336670,
+      "ready_epoch_ns": 1788078442483481244,
+      "start_offset_from_python_release_ms": 1.607715,
+      "client_release_to_start_ms": 0.00198,
+      "ready_ms": 1102.144574
+    },
+    {
+      "client_id": "hasura-84",
+      "query_index": 84,
+      "start_epoch_ns": 1788078441381372781,
+      "ready_epoch_ns": 1788078442485922862,
+      "start_offset_from_python_release_ms": 1.643826,
+      "client_release_to_start_ms": 0.00201,
+      "ready_ms": 1104.550081
+    },
+    {
+      "client_id": "hasura-85",
+      "query_index": 85,
+      "start_epoch_ns": 1788078441381404002,
+      "ready_epoch_ns": 1788078442483510764,
+      "start_offset_from_python_release_ms": 1.675047,
+      "client_release_to_start_ms": 0.00193,
+      "ready_ms": 1102.106762
+    },
+    {
+      "client_id": "hasura-87",
+      "query_index": 87,
+      "start_epoch_ns": 1788078441381441293,
+      "ready_epoch_ns": 1788078442484453191,
+      "start_offset_from_python_release_ms": 1.712338,
+      "client_release_to_start_ms": 0.00189,
+      "ready_ms": 1103.011898
+    },
+    {
+      "client_id": "hasura-86",
+      "query_index": 86,
+      "start_epoch_ns": 1788078441381484264,
+      "ready_epoch_ns": 1788078442476676401,
+      "start_offset_from_python_release_ms": 1.755309,
+      "client_release_to_start_ms": 0.00212,
+      "ready_ms": 1095.192137
+    },
+    {
+      "client_id": "hasura-88",
+      "query_index": 88,
+      "start_epoch_ns": 1788078441381518115,
+      "ready_epoch_ns": 1788078442480181531,
+      "start_offset_from_python_release_ms": 1.78916,
+      "client_release_to_start_ms": 0.00183,
+      "ready_ms": 1098.663416
+    },
+    {
+      "client_id": "hasura-89",
+      "query_index": 89,
+      "start_epoch_ns": 1788078441381549086,
+      "ready_epoch_ns": 1788078442478853593,
+      "start_offset_from_python_release_ms": 1.820131,
+      "client_release_to_start_ms": 0.00182,
+      "ready_ms": 1097.304507
+    },
+    {
+      "client_id": "hasura-90",
+      "query_index": 90,
+      "start_epoch_ns": 1788078441381594367,
+      "ready_epoch_ns": 1788078442484007058,
+      "start_offset_from_python_release_ms": 1.865412,
+      "client_release_to_start_ms": 0.00193,
+      "ready_ms": 1102.412691
+    },
+    {
+      "client_id": "hasura-92",
+      "query_index": 92,
+      "start_epoch_ns": 1788078441381627408,
+      "ready_epoch_ns": 1788078442483309239,
+      "start_offset_from_python_release_ms": 1.898453,
+      "client_release_to_start_ms": 0.00196,
+      "ready_ms": 1101.681831
+    },
+    {
+      "client_id": "hasura-91",
+      "query_index": 91,
+      "start_epoch_ns": 1788078441381658769,
+      "ready_epoch_ns": 1788078442476414704,
+      "start_offset_from_python_release_ms": 1.929814,
+      "client_release_to_start_ms": 0.00197,
+      "ready_ms": 1094.755935
+    },
+    {
+      "client_id": "hasura-93",
+      "query_index": 93,
+      "start_epoch_ns": 1788078441381694180,
+      "ready_epoch_ns": 1788078442484124461,
+      "start_offset_from_python_release_ms": 1.965225,
+      "client_release_to_start_ms": 0.00198,
+      "ready_ms": 1102.430281
+    },
+    {
+      "client_id": "hasura-96",
+      "query_index": 96,
+      "start_epoch_ns": 1788078441381724540,
+      "ready_epoch_ns": 1788078442485758517,
+      "start_offset_from_python_release_ms": 1.995585,
+      "client_release_to_start_ms": 0.00178,
+      "ready_ms": 1104.033977
+    },
+    {
+      "client_id": "hasura-97",
+      "query_index": 97,
+      "start_epoch_ns": 1788078441381762342,
+      "ready_epoch_ns": 1788078442475181999,
+      "start_offset_from_python_release_ms": 2.033387,
+      "client_release_to_start_ms": 0.001941,
+      "ready_ms": 1093.419657
+    },
+    {
+      "client_id": "hasura-99",
+      "query_index": 99,
+      "start_epoch_ns": 1788078441381795212,
+      "ready_epoch_ns": 1788078442483001310,
+      "start_offset_from_python_release_ms": 2.066257,
+      "client_release_to_start_ms": 0.00183,
+      "ready_ms": 1101.206098
+    },
+    {
+      "client_id": "hasura-105",
+      "query_index": 105,
+      "start_epoch_ns": 1788078441381833313,
+      "ready_epoch_ns": 1788078442484096300,
+      "start_offset_from_python_release_ms": 2.104358,
+      "client_release_to_start_ms": 0.00195,
+      "ready_ms": 1102.262987
+    },
+    {
+      "client_id": "hasura-115",
+      "query_index": 115,
+      "start_epoch_ns": 1788078441381866114,
+      "ready_epoch_ns": 1788078442483141783,
+      "start_offset_from_python_release_ms": 2.137159,
+      "client_release_to_start_ms": 0.00202,
+      "ready_ms": 1101.275669
+    },
+    {
+      "client_id": "hasura-16",
+      "query_index": 16,
+      "start_epoch_ns": 1788078441381902445,
+      "ready_epoch_ns": 1788078442478368459,
+      "start_offset_from_python_release_ms": 2.17349,
+      "client_release_to_start_ms": 0.00295,
+      "ready_ms": 1096.466014
+    },
+    {
+      "client_id": "hasura-19",
+      "query_index": 19,
+      "start_epoch_ns": 1788078441381934347,
+      "ready_epoch_ns": 1788078442485450839,
+      "start_offset_from_python_release_ms": 2.205392,
+      "client_release_to_start_ms": 0.00184,
+      "ready_ms": 1103.516492
+    },
+    {
+      "client_id": "hasura-17",
+      "query_index": 17,
+      "start_epoch_ns": 1788078441381965808,
+      "ready_epoch_ns": 1788078442484149752,
+      "start_offset_from_python_release_ms": 2.236853,
+      "client_release_to_start_ms": 0.001971,
+      "ready_ms": 1102.183944
+    },
+    {
+      "client_id": "hasura-20",
+      "query_index": 20,
+      "start_epoch_ns": 1788078441382005378,
+      "ready_epoch_ns": 1788078442482575768,
+      "start_offset_from_python_release_ms": 2.276423,
+      "client_release_to_start_ms": 0.00208,
+      "ready_ms": 1100.57039
+    },
+    {
+      "client_id": "hasura-21",
+      "query_index": 21,
+      "start_epoch_ns": 1788078441382038019,
+      "ready_epoch_ns": 1788078442484070110,
+      "start_offset_from_python_release_ms": 2.309064,
+      "client_release_to_start_ms": 0.00184,
+      "ready_ms": 1102.032091
+    },
+    {
+      "client_id": "hasura-22",
+      "query_index": 22,
+      "start_epoch_ns": 1788078441382069140,
+      "ready_epoch_ns": 1788078442478491172,
+      "start_offset_from_python_release_ms": 2.340185,
+      "client_release_to_start_ms": 0.001829,
+      "ready_ms": 1096.422032
+    },
+    {
+      "client_id": "hasura-23",
+      "query_index": 23,
+      "start_epoch_ns": 1788078441382106712,
+      "ready_epoch_ns": 1788078442482975779,
+      "start_offset_from_python_release_ms": 2.377757,
+      "client_release_to_start_ms": 0.001891,
+      "ready_ms": 1100.869067
+    },
+    {
+      "client_id": "hasura-24",
+      "query_index": 24,
+      "start_epoch_ns": 1788078441382136942,
+      "ready_epoch_ns": 1788078442475225130,
+      "start_offset_from_python_release_ms": 2.407987,
+      "client_release_to_start_ms": 0.001889,
+      "ready_ms": 1093.088188
+    },
+    {
+      "client_id": "hasura-26",
+      "query_index": 26,
+      "start_epoch_ns": 1788078441382168823,
+      "ready_epoch_ns": 1788078442485301264,
+      "start_offset_from_python_release_ms": 2.439868,
+      "client_release_to_start_ms": 0.00194,
+      "ready_ms": 1103.132441
+    },
+    {
+      "client_id": "hasura-25",
+      "query_index": 25,
+      "start_epoch_ns": 1788078441382202424,
+      "ready_epoch_ns": 1788078442478902023,
+      "start_offset_from_python_release_ms": 2.473469,
+      "client_release_to_start_ms": 0.00194,
+      "ready_ms": 1096.699599
+    },
+    {
+      "client_id": "hasura-27",
+      "query_index": 27,
+      "start_epoch_ns": 1788078441382232895,
+      "ready_epoch_ns": 1788078442476383243,
+      "start_offset_from_python_release_ms": 2.50394,
+      "client_release_to_start_ms": 0.001971,
+      "ready_ms": 1094.150348
+    },
+    {
+      "client_id": "hasura-28",
+      "query_index": 28,
+      "start_epoch_ns": 1788078441382271465,
+      "ready_epoch_ns": 1788078442483739261,
+      "start_offset_from_python_release_ms": 2.54251,
+      "client_release_to_start_ms": 0.002009,
+      "ready_ms": 1101.467796
+    },
+    {
+      "client_id": "hasura-29",
+      "query_index": 29,
+      "start_epoch_ns": 1788078441382304517,
+      "ready_epoch_ns": 1788078442476352852,
+      "start_offset_from_python_release_ms": 2.575562,
+      "client_release_to_start_ms": 0.001991,
+      "ready_ms": 1094.048335
+    },
+    {
+      "client_id": "hasura-31",
+      "query_index": 31,
+      "start_epoch_ns": 1788078441382336958,
+      "ready_epoch_ns": 1788078442478792251,
+      "start_offset_from_python_release_ms": 2.608003,
+      "client_release_to_start_ms": 0.00184,
+      "ready_ms": 1096.455293
+    },
+    {
+      "client_id": "hasura-30",
+      "query_index": 30,
+      "start_epoch_ns": 1788078441382376499,
+      "ready_epoch_ns": 1788078442483255337,
+      "start_offset_from_python_release_ms": 2.647544,
+      "client_release_to_start_ms": 0.002051,
+      "ready_ms": 1100.878838
+    },
+    {
+      "client_id": "hasura-32",
+      "query_index": 32,
+      "start_epoch_ns": 1788078441382409669,
+      "ready_epoch_ns": 1788078442483872674,
+      "start_offset_from_python_release_ms": 2.680714,
+      "client_release_to_start_ms": 0.00204,
+      "ready_ms": 1101.463005
+    },
+    {
+      "client_id": "hasura-33",
+      "query_index": 33,
+      "start_epoch_ns": 1788078441382445111,
+      "ready_epoch_ns": 1788078442482866466,
+      "start_offset_from_python_release_ms": 2.716156,
+      "client_release_to_start_ms": 0.00192,
+      "ready_ms": 1100.421355
+    },
+    {
+      "client_id": "hasura-83",
+      "query_index": 83,
+      "start_epoch_ns": 1788078441382528644,
+      "ready_epoch_ns": 1788078442482726382,
+      "start_offset_from_python_release_ms": 2.799689,
+      "client_release_to_start_ms": 0.002331,
+      "ready_ms": 1100.197738
+    },
+    {
+      "client_id": "hasura-14",
+      "query_index": 14,
+      "start_epoch_ns": 1788078441382564375,
+      "ready_epoch_ns": 1788078442480373736,
+      "start_offset_from_python_release_ms": 2.83542,
+      "client_release_to_start_ms": 0.001911,
+      "ready_ms": 1097.809361
+    },
+    {
+      "client_id": "hasura-15",
+      "query_index": 15,
+      "start_epoch_ns": 1788078441382594705,
+      "ready_epoch_ns": 1788078442483574746,
+      "start_offset_from_python_release_ms": 2.86575,
+      "client_release_to_start_ms": 0.00194,
+      "ready_ms": 1100.980041
+    },
+    {
+      "client_id": "hasura-36",
+      "query_index": 36,
+      "start_epoch_ns": 1788078441382631516,
+      "ready_epoch_ns": 1788078442476522527,
+      "start_offset_from_python_release_ms": 2.902561,
+      "client_release_to_start_ms": 0.0021,
+      "ready_ms": 1093.891011
+    },
+    {
+      "client_id": "hasura-37",
+      "query_index": 37,
+      "start_epoch_ns": 1788078441382663217,
+      "ready_epoch_ns": 1788078442484425879,
+      "start_offset_from_python_release_ms": 2.934262,
+      "client_release_to_start_ms": 0.00186,
+      "ready_ms": 1101.762662
+    },
+    {
+      "client_id": "hasura-38",
+      "query_index": 38,
+      "start_epoch_ns": 1788078441382695108,
+      "ready_epoch_ns": 1788078442480061416,
+      "start_offset_from_python_release_ms": 2.966153,
+      "client_release_to_start_ms": 0.00199,
+      "ready_ms": 1097.366308
+    },
+    {
+      "client_id": "hasura-39",
+      "query_index": 39,
+      "start_epoch_ns": 1788078441382733609,
+      "ready_epoch_ns": 1788078442482696721,
+      "start_offset_from_python_release_ms": 3.004654,
+      "client_release_to_start_ms": 0.00195,
+      "ready_ms": 1099.963112
+    },
+    {
+      "client_id": "hasura-40",
+      "query_index": 40,
+      "start_epoch_ns": 1788078441382766080,
+      "ready_epoch_ns": 1788078442485841749,
+      "start_offset_from_python_release_ms": 3.037125,
+      "client_release_to_start_ms": 0.00177,
+      "ready_ms": 1103.075669
+    },
+    {
+      "client_id": "hasura-41",
+      "query_index": 41,
+      "start_epoch_ns": 1788078441382798201,
+      "ready_epoch_ns": 1788078442483445803,
+      "start_offset_from_python_release_ms": 3.069246,
+      "client_release_to_start_ms": 0.0018,
+      "ready_ms": 1100.647602
+    },
+    {
+      "client_id": "hasura-42",
+      "query_index": 42,
+      "start_epoch_ns": 1788078441382836532,
+      "ready_epoch_ns": 1788078442476609739,
+      "start_offset_from_python_release_ms": 3.107577,
+      "client_release_to_start_ms": 0.00182,
+      "ready_ms": 1093.773207
+    },
+    {
+      "client_id": "hasura-43",
+      "query_index": 43,
+      "start_epoch_ns": 1788078441382868723,
+      "ready_epoch_ns": 1788078442476194907,
+      "start_offset_from_python_release_ms": 3.139768,
+      "client_release_to_start_ms": 0.0021,
+      "ready_ms": 1093.326184
+    },
+    {
+      "client_id": "hasura-44",
+      "query_index": 44,
+      "start_epoch_ns": 1788078441382901284,
+      "ready_epoch_ns": 1788078442483362440,
+      "start_offset_from_python_release_ms": 3.172329,
+      "client_release_to_start_ms": 0.00205,
+      "ready_ms": 1100.461156
+    },
+    {
+      "client_id": "hasura-45",
+      "query_index": 45,
+      "start_epoch_ns": 1788078441382940105,
+      "ready_epoch_ns": 1788078442478615356,
+      "start_offset_from_python_release_ms": 3.21115,
+      "client_release_to_start_ms": 0.00195,
+      "ready_ms": 1095.675251
+    },
+    {
+      "client_id": "hasura-47",
+      "query_index": 47,
+      "start_epoch_ns": 1788078441382971756,
+      "ready_epoch_ns": 1788078442478399850,
+      "start_offset_from_python_release_ms": 3.242801,
+      "client_release_to_start_ms": 0.00204,
+      "ready_ms": 1095.428094
+    },
+    {
+      "client_id": "hasura-49",
+      "query_index": 49,
+      "start_epoch_ns": 1788078441383001797,
+      "ready_epoch_ns": 1788078442483982177,
+      "start_offset_from_python_release_ms": 3.272842,
+      "client_release_to_start_ms": 0.001921,
+      "ready_ms": 1100.98038
+    },
+    {
+      "client_id": "hasura-46",
+      "query_index": 46,
+      "start_epoch_ns": 1788078441383036477,
+      "ready_epoch_ns": 1788078442484260745,
+      "start_offset_from_python_release_ms": 3.307522,
+      "client_release_to_start_ms": 0.00202,
+      "ready_ms": 1101.224268
+    },
+    {
+      "client_id": "hasura-48",
+      "query_index": 48,
+      "start_epoch_ns": 1788078441383066898,
+      "ready_epoch_ns": 1788078442483715270,
+      "start_offset_from_python_release_ms": 3.337943,
+      "client_release_to_start_ms": 0.00199,
+      "ready_ms": 1100.648372
+    },
+    {
+      "client_id": "hasura-51",
+      "query_index": 51,
+      "start_epoch_ns": 1788078441383105729,
+      "ready_epoch_ns": 1788078442482919517,
+      "start_offset_from_python_release_ms": 3.376774,
+      "client_release_to_start_ms": 0.01212,
+      "ready_ms": 1099.813788
+    },
+    {
+      "client_id": "hasura-52",
+      "query_index": 52,
+      "start_epoch_ns": 1788078441383144870,
+      "ready_epoch_ns": 1788078442485700635,
+      "start_offset_from_python_release_ms": 3.415915,
+      "client_release_to_start_ms": 0.00192,
+      "ready_ms": 1102.555765
+    },
+    {
+      "client_id": "hasura-53",
+      "query_index": 53,
+      "start_epoch_ns": 1788078441383185272,
+      "ready_epoch_ns": 1788078442478819612,
+      "start_offset_from_python_release_ms": 3.456317,
+      "client_release_to_start_ms": 0.002001,
+      "ready_ms": 1095.63434
+    },
+    {
+      "client_id": "hasura-55",
+      "query_index": 55,
+      "start_epoch_ns": 1788078441383221073,
+      "ready_epoch_ns": 1788078442476257580,
+      "start_offset_from_python_release_ms": 3.492118,
+      "client_release_to_start_ms": 0.001921,
+      "ready_ms": 1093.036507
+    },
+    {
+      "client_id": "hasura-54",
+      "query_index": 54,
+      "start_epoch_ns": 1788078441383257304,
+      "ready_epoch_ns": 1788078442483925786,
+      "start_offset_from_python_release_ms": 3.528349,
+      "client_release_to_start_ms": 0.002091,
+      "ready_ms": 1100.668482
+    },
+    {
+      "client_id": "hasura-56",
+      "query_index": 56,
+      "start_epoch_ns": 1788078441383289234,
+      "ready_epoch_ns": 1788078442483280558,
+      "start_offset_from_python_release_ms": 3.560279,
+      "client_release_to_start_ms": 0.00196,
+      "ready_ms": 1099.991324
+    },
+    {
+      "client_id": "hasura-59",
+      "query_index": 59,
+      "start_epoch_ns": 1788078441383328955,
+      "ready_epoch_ns": 1788078442485972603,
+      "start_offset_from_python_release_ms": 3.6,
+      "client_release_to_start_ms": 0.00193,
+      "ready_ms": 1102.643648
+    },
+    {
+      "client_id": "hasura-62",
+      "query_index": 62,
+      "start_epoch_ns": 1788078441383361286,
+      "ready_epoch_ns": 1788078442480152059,
+      "start_offset_from_python_release_ms": 3.632331,
+      "client_release_to_start_ms": 0.00202,
+      "ready_ms": 1096.790773
+    },
+    {
+      "client_id": "hasura-61",
+      "query_index": 61,
+      "start_epoch_ns": 1788078441383401037,
+      "ready_epoch_ns": 1788078442484371808,
+      "start_offset_from_python_release_ms": 3.672082,
+      "client_release_to_start_ms": 0.00198,
+      "ready_ms": 1100.970771
+    },
+    {
+      "client_id": "hasura-60",
+      "query_index": 60,
+      "start_epoch_ns": 1788078441383437118,
+      "ready_epoch_ns": 1788078442483170184,
+      "start_offset_from_python_release_ms": 3.708163,
+      "client_release_to_start_ms": 0.00734,
+      "ready_ms": 1099.733066
+    },
+    {
+      "client_id": "hasura-63",
+      "query_index": 63,
+      "start_epoch_ns": 1788078441383488820,
+      "ready_epoch_ns": 1788078442480320855,
+      "start_offset_from_python_release_ms": 3.759865,
+      "client_release_to_start_ms": 0.002229,
+      "ready_ms": 1096.832035
+    },
+    {
+      "client_id": "hasura-18",
+      "query_index": 18,
+      "start_epoch_ns": 1788078441383522221,
+      "ready_epoch_ns": 1788078442478674017,
+      "start_offset_from_python_release_ms": 3.793266,
+      "client_release_to_start_ms": 0.00198,
+      "ready_ms": 1095.151796
+    },
+    {
+      "client_id": "hasura-64",
+      "query_index": 64,
+      "start_epoch_ns": 1788078441383557993,
+      "ready_epoch_ns": 1788078442485623873,
+      "start_offset_from_python_release_ms": 3.829038,
+      "client_release_to_start_ms": 0.001851,
+      "ready_ms": 1102.06588
+    },
+    {
+      "client_id": "hasura-65",
+      "query_index": 65,
+      "start_epoch_ns": 1788078441383632164,
+      "ready_epoch_ns": 1788078442478335778,
+      "start_offset_from_python_release_ms": 3.903209,
+      "client_release_to_start_ms": 0.00242,
+      "ready_ms": 1094.703614
+    },
+    {
+      "client_id": "hasura-69",
+      "query_index": 69,
+      "start_epoch_ns": 1788078441383666565,
+      "ready_epoch_ns": 1788078442478520923,
+      "start_offset_from_python_release_ms": 3.93761,
+      "client_release_to_start_ms": 0.001969,
+      "ready_ms": 1094.854358
+    },
+    {
+      "client_id": "hasura-68",
+      "query_index": 68,
+      "start_epoch_ns": 1788078441383697966,
+      "ready_epoch_ns": 1788078442484206303,
+      "start_offset_from_python_release_ms": 3.969011,
+      "client_release_to_start_ms": 0.00194,
+      "ready_ms": 1100.508337
+    },
+    {
+      "client_id": "hasura-71",
+      "query_index": 71,
+      "start_epoch_ns": 1788078441383731007,
+      "ready_epoch_ns": 1788078442482639849,
+      "start_offset_from_python_release_ms": 4.002052,
+      "client_release_to_start_ms": 0.00185,
+      "ready_ms": 1098.908842
+    },
+    {
+      "client_id": "hasura-70",
+      "query_index": 70,
+      "start_epoch_ns": 1788078441383776648,
+      "ready_epoch_ns": 1788078442483606947,
+      "start_offset_from_python_release_ms": 4.047693,
+      "client_release_to_start_ms": 0.002,
+      "ready_ms": 1099.830299
+    },
+    {
+      "client_id": "hasura-72",
+      "query_index": 72,
+      "start_epoch_ns": 1788078441383809429,
+      "ready_epoch_ns": 1788078442485363306,
+      "start_offset_from_python_release_ms": 4.080474,
+      "client_release_to_start_ms": 0.00198,
+      "ready_ms": 1101.553877
+    },
+    {
+      "client_id": "hasura-73",
+      "query_index": 73,
+      "start_epoch_ns": 1788078441383841641,
+      "ready_epoch_ns": 1788078442484492412,
+      "start_offset_from_python_release_ms": 4.112686,
+      "client_release_to_start_ms": 0.0018,
+      "ready_ms": 1100.650771
+    },
+    {
+      "client_id": "hasura-74",
+      "query_index": 74,
+      "start_epoch_ns": 1788078441383877122,
+      "ready_epoch_ns": 1788078442480097777,
+      "start_offset_from_python_release_ms": 4.148167,
+      "client_release_to_start_ms": 0.001852,
+      "ready_ms": 1096.220655
+    },
+    {
+      "client_id": "hasura-100",
+      "query_index": 100,
+      "start_epoch_ns": 1788078441383910122,
+      "ready_epoch_ns": 1788078442476228699,
+      "start_offset_from_python_release_ms": 4.181167,
+      "client_release_to_start_ms": 0.00197,
+      "ready_ms": 1092.318577
+    },
+    {
+      "client_id": "hasura-101",
+      "query_index": 101,
+      "start_epoch_ns": 1788078441383948804,
+      "ready_epoch_ns": 1788078442478989797,
+      "start_offset_from_python_release_ms": 4.219849,
+      "client_release_to_start_ms": 0.001971,
+      "ready_ms": 1095.040993
+    },
+    {
+      "client_id": "hasura-102",
+      "query_index": 102,
+      "start_epoch_ns": 1788078441383980654,
+      "ready_epoch_ns": 1788078442485420618,
+      "start_offset_from_python_release_ms": 4.251699,
+      "client_release_to_start_ms": 0.00186,
+      "ready_ms": 1101.439964
+    },
+    {
+      "client_id": "hasura-103",
+      "query_index": 103,
+      "start_epoch_ns": 1788078441384018415,
+      "ready_epoch_ns": 1788078442485338465,
+      "start_offset_from_python_release_ms": 4.28946,
+      "client_release_to_start_ms": 0.00183,
+      "ready_ms": 1101.32005
+    },
+    {
+      "client_id": "hasura-104",
+      "query_index": 104,
+      "start_epoch_ns": 1788078441384050676,
+      "ready_epoch_ns": 1788078442482613779,
+      "start_offset_from_python_release_ms": 4.321721,
+      "client_release_to_start_ms": 0.00203,
+      "ready_ms": 1098.563103
+    },
+    {
+      "client_id": "hasura-106",
+      "query_index": 106,
+      "start_epoch_ns": 1788078441384081517,
+      "ready_epoch_ns": 1788078442478449651,
+      "start_offset_from_python_release_ms": 4.352562,
+      "client_release_to_start_ms": 0.00204,
+      "ready_ms": 1094.368134
+    },
+    {
+      "client_id": "hasura-95",
+      "query_index": 95,
+      "start_epoch_ns": 1788078441384120358,
+      "ready_epoch_ns": 1788078442482947318,
+      "start_offset_from_python_release_ms": 4.391403,
+      "client_release_to_start_ms": 0.00229,
+      "ready_ms": 1098.82696
+    },
+    {
+      "client_id": "hasura-107",
+      "query_index": 107,
+      "start_epoch_ns": 1788078441384191440,
+      "ready_epoch_ns": 1788078442483847614,
+      "start_offset_from_python_release_ms": 4.462485,
+      "client_release_to_start_ms": 0.00244,
+      "ready_ms": 1099.656174
+    },
+    {
+      "client_id": "hasura-109",
+      "query_index": 109,
+      "start_epoch_ns": 1788078441384226481,
+      "ready_epoch_ns": 1788078442483535495,
+      "start_offset_from_python_release_ms": 4.497526,
+      "client_release_to_start_ms": 0.00205,
+      "ready_ms": 1099.309014
+    },
+    {
+      "client_id": "hasura-110",
+      "query_index": 110,
+      "start_epoch_ns": 1788078441384272612,
+      "ready_epoch_ns": 1788078442476707372,
+      "start_offset_from_python_release_ms": 4.543657,
+      "client_release_to_start_ms": 0.00216,
+      "ready_ms": 1092.43476
+    },
+    {
+      "client_id": "hasura-108",
+      "query_index": 108,
+      "start_epoch_ns": 1788078441384306013,
+      "ready_epoch_ns": 1788078442478735450,
+      "start_offset_from_python_release_ms": 4.577058,
+      "client_release_to_start_ms": 0.00197,
+      "ready_ms": 1094.429437
+    },
+    {
+      "client_id": "hasura-111",
+      "query_index": 111,
+      "start_epoch_ns": 1788078441384354925,
+      "ready_epoch_ns": 1788078442485559362,
+      "start_offset_from_python_release_ms": 4.62597,
+      "client_release_to_start_ms": 0.00199,
+      "ready_ms": 1101.204437
+    },
+    {
+      "client_id": "hasura-112",
+      "query_index": 112,
+      "start_epoch_ns": 1788078441384388186,
+      "ready_epoch_ns": 1788078442480293314,
+      "start_offset_from_python_release_ms": 4.659231,
+      "client_release_to_start_ms": 0.00197,
+      "ready_ms": 1095.905128
+    },
+    {
+      "client_id": "hasura-113",
+      "query_index": 113,
+      "start_epoch_ns": 1788078441384420997,
+      "ready_epoch_ns": 1788078442480125218,
+      "start_offset_from_python_release_ms": 4.692042,
+      "client_release_to_start_ms": 0.001901,
+      "ready_ms": 1095.704221
+    },
+    {
+      "client_id": "hasura-116",
+      "query_index": 116,
+      "start_epoch_ns": 1788078441384478258,
+      "ready_epoch_ns": 1788078442486001415,
+      "start_offset_from_python_release_ms": 4.749303,
+      "client_release_to_start_ms": 0.00232,
+      "ready_ms": 1101.523157
+    },
+    {
+      "client_id": "hasura-118",
+      "query_index": 118,
+      "start_epoch_ns": 1788078441384523479,
+      "ready_epoch_ns": 1788078442482779043,
+      "start_offset_from_python_release_ms": 4.794524,
+      "client_release_to_start_ms": 0.00217,
+      "ready_ms": 1098.255564
+    },
+    {
+      "client_id": "hasura-117",
+      "query_index": 117,
+      "start_epoch_ns": 1788078441384568911,
+      "ready_epoch_ns": 1788078442485869900,
+      "start_offset_from_python_release_ms": 4.839956,
+      "client_release_to_start_ms": 0.00212,
+      "ready_ms": 1101.300989
+    },
+    {
+      "client_id": "hasura-120",
+      "query_index": 120,
+      "start_epoch_ns": 1788078441384602612,
+      "ready_epoch_ns": 1788078442482838475,
+      "start_offset_from_python_release_ms": 4.873657,
+      "client_release_to_start_ms": 0.002151,
+      "ready_ms": 1098.235863
+    },
+    {
+      "client_id": "hasura-121",
+      "query_index": 121,
+      "start_epoch_ns": 1788078441384634062,
+      "ready_epoch_ns": 1788078442476552828,
+      "start_offset_from_python_release_ms": 4.905107,
+      "client_release_to_start_ms": 0.00203,
+      "ready_ms": 1091.918766
+    },
+    {
+      "client_id": "hasura-119",
+      "query_index": 119,
+      "start_epoch_ns": 1788078441384664593,
+      "ready_epoch_ns": 1788078442485648924,
+      "start_offset_from_python_release_ms": 4.935638,
+      "client_release_to_start_ms": 0.00185,
+      "ready_ms": 1100.984331
+    },
+    {
+      "client_id": "hasura-122",
+      "query_index": 122,
+      "start_epoch_ns": 1788078441384694554,
+      "ready_epoch_ns": 1788078442483955747,
+      "start_offset_from_python_release_ms": 4.965599,
+      "client_release_to_start_ms": 0.00196,
+      "ready_ms": 1099.261193
+    },
+    {
+      "client_id": "hasura-123",
+      "query_index": 123,
+      "start_epoch_ns": 1788078441384732415,
+      "ready_epoch_ns": 1788078442483228366,
+      "start_offset_from_python_release_ms": 5.00346,
+      "client_release_to_start_ms": 0.0021,
+      "ready_ms": 1098.495951
+    },
+    {
+      "client_id": "hasura-124",
+      "query_index": 124,
+      "start_epoch_ns": 1788078441384765296,
+      "ready_epoch_ns": 1788078442476442975,
+      "start_offset_from_python_release_ms": 5.036341,
+      "client_release_to_start_ms": 0.00185,
+      "ready_ms": 1091.677679
+    },
+    {
+      "client_id": "hasura-125",
+      "query_index": 125,
+      "start_epoch_ns": 1788078441384797687,
+      "ready_epoch_ns": 1788078442483819713,
+      "start_offset_from_python_release_ms": 5.068732,
+      "client_release_to_start_ms": 0.00208,
+      "ready_ms": 1099.022026
+    },
+    {
+      "client_id": "hasura-126",
+      "query_index": 126,
+      "start_epoch_ns": 1788078441384831289,
+      "ready_epoch_ns": 1788078442478764060,
+      "start_offset_from_python_release_ms": 5.102334,
+      "client_release_to_start_ms": 0.002051,
+      "ready_ms": 1093.932771
+    },
+    {
+      "client_id": "hasura-127",
+      "query_index": 127,
+      "start_epoch_ns": 1788078441384863710,
+      "ready_epoch_ns": 1788078442484230554,
+      "start_offset_from_python_release_ms": 5.134755,
+      "client_release_to_start_ms": 0.001971,
+      "ready_ms": 1099.366844
+    },
+    {
+      "client_id": "hasura-94",
+      "query_index": 94,
+      "start_epoch_ns": 1788078441384895771,
+      "ready_epoch_ns": 1788078442476286660,
+      "start_offset_from_python_release_ms": 5.166816,
+      "client_release_to_start_ms": 0.00198,
+      "ready_ms": 1091.390889
+    },
+    {
+      "client_id": "hasura-129",
+      "query_index": 129,
+      "start_epoch_ns": 1788078441384934801,
+      "ready_epoch_ns": 1788078442476582909,
+      "start_offset_from_python_release_ms": 5.205846,
+      "client_release_to_start_ms": 0.001989,
+      "ready_ms": 1091.648108
+    },
+    {
+      "client_id": "hasura-131",
+      "query_index": 131,
+      "start_epoch_ns": 1788078441384967342,
+      "ready_epoch_ns": 1788078442485783798,
+      "start_offset_from_python_release_ms": 5.238387,
+      "client_release_to_start_ms": 0.00198,
+      "ready_ms": 1100.816456
+    },
+    {
+      "client_id": "hasura-132",
+      "query_index": 132,
+      "start_epoch_ns": 1788078441384999973,
+      "ready_epoch_ns": 1788078442482753933,
+      "start_offset_from_python_release_ms": 5.271018,
+      "client_release_to_start_ms": 0.002191,
+      "ready_ms": 1097.75396
+    },
+    {
+      "client_id": "hasura-133",
+      "query_index": 133,
+      "start_epoch_ns": 1788078441385041204,
+      "ready_epoch_ns": 1788078442484178443,
+      "start_offset_from_python_release_ms": 5.312249,
+      "client_release_to_start_ms": 0.003189,
+      "ready_ms": 1099.137239
+    },
+    {
+      "client_id": "hasura-134",
+      "query_index": 134,
+      "start_epoch_ns": 1788078441385078145,
+      "ready_epoch_ns": 1788078442478701649,
+      "start_offset_from_python_release_ms": 5.34919,
+      "client_release_to_start_ms": 0.001969,
+      "ready_ms": 1093.623504
+    },
+    {
+      "client_id": "hasura-135",
+      "query_index": 135,
+      "start_epoch_ns": 1788078441385108456,
+      "ready_epoch_ns": 1788078442483391550,
+      "start_offset_from_python_release_ms": 5.379501,
+      "client_release_to_start_ms": 0.0019,
+      "ready_ms": 1098.283094
+    },
+    {
+      "client_id": "hasura-136",
+      "query_index": 136,
+      "start_epoch_ns": 1788078441385139266,
+      "ready_epoch_ns": 1788078442476127065,
+      "start_offset_from_python_release_ms": 5.410311,
+      "client_release_to_start_ms": 0.00196,
+      "ready_ms": 1090.987799
+    },
+    {
+      "client_id": "hasura-137",
+      "query_index": 137,
+      "start_epoch_ns": 1788078441385175038,
+      "ready_epoch_ns": 1788078442485596483,
+      "start_offset_from_python_release_ms": 5.446083,
+      "client_release_to_start_ms": 0.001991,
+      "ready_ms": 1100.421445
+    },
+    {
+      "client_id": "hasura-138",
+      "query_index": 138,
+      "start_epoch_ns": 1788078441385205979,
+      "ready_epoch_ns": 1788078442480265313,
+      "start_offset_from_python_release_ms": 5.477024,
+      "client_release_to_start_ms": 0.002071,
+      "ready_ms": 1095.059334
+    },
+    {
+      "client_id": "hasura-139",
+      "query_index": 139,
+      "start_epoch_ns": 1788078441385239160,
+      "ready_epoch_ns": 1788078442480347544,
+      "start_offset_from_python_release_ms": 5.510205,
+      "client_release_to_start_ms": 0.001951,
+      "ready_ms": 1095.108384
+    },
+    {
+      "client_id": "hasura-141",
+      "query_index": 141,
+      "start_epoch_ns": 1788078441385269581,
+      "ready_epoch_ns": 1788078442478298507,
+      "start_offset_from_python_release_ms": 5.540626,
+      "client_release_to_start_ms": 0.00192,
+      "ready_ms": 1093.028926
+    },
+    {
+      "client_id": "hasura-140",
+      "query_index": 140,
+      "start_epoch_ns": 1788078441385308822,
+      "ready_epoch_ns": 1788078442485508210,
+      "start_offset_from_python_release_ms": 5.579867,
+      "client_release_to_start_ms": 0.002011,
+      "ready_ms": 1100.199388
+    },
+    {
+      "client_id": "hasura-142",
+      "query_index": 142,
+      "start_epoch_ns": 1788078441385341013,
+      "ready_epoch_ns": 1788078442483417811,
+      "start_offset_from_python_release_ms": 5.612058,
+      "client_release_to_start_ms": 0.00201,
+      "ready_ms": 1098.076798
+    },
+    {
+      "client_id": "hasura-143",
+      "query_index": 143,
+      "start_epoch_ns": 1788078441385381244,
+      "ready_epoch_ns": 1788078442485949093,
+      "start_offset_from_python_release_ms": 5.652289,
+      "client_release_to_start_ms": 0.002,
+      "ready_ms": 1100.567849
+    },
+    {
+      "client_id": "hasura-145",
+      "query_index": 145,
+      "start_epoch_ns": 1788078441385413445,
+      "ready_epoch_ns": 1788078442484346567,
+      "start_offset_from_python_release_ms": 5.68449,
+      "client_release_to_start_ms": 0.00198,
+      "ready_ms": 1098.933122
+    },
+    {
+      "client_id": "hasura-146",
+      "query_index": 146,
+      "start_epoch_ns": 1788078441385445866,
+      "ready_epoch_ns": 1788078442480208800,
+      "start_offset_from_python_release_ms": 5.716911,
+      "client_release_to_start_ms": 0.00193,
+      "ready_ms": 1094.762934
+    },
+    {
+      "client_id": "hasura-148",
+      "query_index": 148,
+      "start_epoch_ns": 1788078441385495147,
+      "ready_epoch_ns": 1788078442476643130,
+      "start_offset_from_python_release_ms": 5.766192,
+      "client_release_to_start_ms": 0.00209,
+      "ready_ms": 1091.147983
+    },
+    {
+      "client_id": "hasura-149",
+      "query_index": 149,
+      "start_epoch_ns": 1788078441385529288,
+      "ready_epoch_ns": 1788078442483333019,
+      "start_offset_from_python_release_ms": 5.800333,
+      "client_release_to_start_ms": 0.00197,
+      "ready_ms": 1097.803731
+    },
+    {
+      "client_id": "hasura-144",
+      "query_index": 144,
+      "start_epoch_ns": 1788078441385566239,
+      "ready_epoch_ns": 1788078442483083733,
+      "start_offset_from_python_release_ms": 5.837284,
+      "client_release_to_start_ms": 0.00194,
+      "ready_ms": 1097.517494
+    },
+    {
+      "client_id": "hasura-128",
+      "query_index": 128,
+      "start_epoch_ns": 1788078441385608630,
+      "ready_epoch_ns": 1788078442478551284,
+      "start_offset_from_python_release_ms": 5.879675,
+      "client_release_to_start_ms": 0.00196,
+      "ready_ms": 1092.942654
+    },
+    {
+      "client_id": "hasura-66",
+      "query_index": 66,
+      "start_epoch_ns": 1788078441385640761,
+      "ready_epoch_ns": 1788078442483685899,
+      "start_offset_from_python_release_ms": 5.911806,
+      "client_release_to_start_ms": 0.00196,
+      "ready_ms": 1098.045138
+    },
+    {
+      "client_id": "hasura-82",
+      "query_index": 82,
+      "start_epoch_ns": 1788078441385678992,
+      "ready_epoch_ns": 1788078442484292726,
+      "start_offset_from_python_release_ms": 5.950037,
+      "client_release_to_start_ms": 0.00196,
+      "ready_ms": 1098.613734
+    },
+    {
+      "client_id": "hasura-98",
+      "query_index": 98,
+      "start_epoch_ns": 1788078441385711383,
+      "ready_epoch_ns": 1788078442483053872,
+      "start_offset_from_python_release_ms": 5.982428,
+      "client_release_to_start_ms": 0.00198,
+      "ready_ms": 1097.342489
+    },
+    {
+      "client_id": "hasura-114",
+      "query_index": 114,
+      "start_epoch_ns": 1788078441385743054,
+      "ready_epoch_ns": 1788078442484400309,
+      "start_offset_from_python_release_ms": 6.014099,
+      "client_release_to_start_ms": 0.00206,
+      "ready_ms": 1098.657255
+    },
+    {
+      "client_id": "hasura-130",
+      "query_index": 130,
+      "start_epoch_ns": 1788078441385775745,
+      "ready_epoch_ns": 1788078442483765441,
+      "start_offset_from_python_release_ms": 6.04679,
+      "client_release_to_start_ms": 0.00187,
+      "ready_ms": 1097.989696
+    },
+    {
+      "client_id": "hasura-147",
+      "query_index": 147,
+      "start_epoch_ns": 1788078441385811056,
+      "ready_epoch_ns": 1788078442483634768,
+      "start_offset_from_python_release_ms": 6.082101,
+      "client_release_to_start_ms": 0.0022,
+      "ready_ms": 1097.823712
+    }
+  ],
+  "errors": []
+}

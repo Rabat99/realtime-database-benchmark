@@ -1,0 +1,463 @@
+{
+  "system": "zero",
+  "ts": "2026-08-17T23:08:01",
+  "harness": "expr_core v3 (PostgreSQL oracle + progress barrier + empirical capability probe)",
+  "semantic_scope": "initial_result_plus_continuous_result_maintenance",
+  "negative_probe_method": "progress_barrier",
+  "topology": {
+    "topic": 1,
+    "other_topic": 2,
+    "user_a": 1,
+    "user_b": 2,
+    "user_off": 7,
+    "needle": "gamma",
+    "miss_word": "omega",
+    "limit": 10,
+    "offset": 5
+  },
+  "text_filter_note": "e8_text uses ILIKE substring/pattern matching; it is not PostgreSQL full-text search",
+  "classes": {
+    "e1_and": {
+      "label": "Composite Query (AND)",
+      "verdict": "supported",
+      "probes": [
+        {
+          "cls": "e1_and",
+          "probe": "T0 Initialzustand",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "34 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.022
+        },
+        {
+          "cls": "e1_and",
+          "probe": "T2 Insert -> Eintritt",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "35 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.022
+        },
+        {
+          "cls": "e1_and",
+          "probe": "T3 Update Filter -> Austritt",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "34 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.021
+        },
+        {
+          "cls": "e1_and",
+          "probe": "T4 Update Filter -> Wiedereintritt",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "35 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.021
+        },
+        {
+          "cls": "e1_and",
+          "probe": "T5 Delete -> Austritt",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "34 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.022
+        },
+        {
+          "cls": "e1_and",
+          "probe": "T7 Nichttreffer bleibt draussen",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "Fortschrittsbarriere 1000145 verarbeitet; gepflegter Zustand entspricht dem Orakel (35 Zeilen entsprechen dem Referenzergebnis)",
+          "latency_s": 0.021
+        }
+      ],
+      "state_proofs_passed": 0,
+      "median_converge_s": 0.022
+    },
+    "e1_or": {
+      "label": "Composite Query (OR)",
+      "verdict": "supported",
+      "probes": [
+        {
+          "cls": "e1_or",
+          "probe": "T0 Initialzustand",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "34 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.022
+        },
+        {
+          "cls": "e1_or",
+          "probe": "T2 Insert -> Eintritt",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "35 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.022
+        },
+        {
+          "cls": "e1_or",
+          "probe": "T3 Update Filter -> Austritt",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "34 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.021
+        },
+        {
+          "cls": "e1_or",
+          "probe": "T4 Update Filter -> Wiedereintritt",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "35 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.021
+        },
+        {
+          "cls": "e1_or",
+          "probe": "T5 Delete -> Austritt",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "34 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.021
+        },
+        {
+          "cls": "e1_or",
+          "probe": "T7 Nichttreffer bleibt draussen",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "Fortschrittsbarriere 1000148 verarbeitet; gepflegter Zustand entspricht dem Orakel (35 Zeilen entsprechen dem Referenzergebnis)",
+          "latency_s": 0.143
+        }
+      ],
+      "state_proofs_passed": 0,
+      "median_converge_s": 0.022
+    },
+    "e2_sorted": {
+      "label": "Sorted Query",
+      "verdict": "supported",
+      "probes": [
+        {
+          "cls": "e2_sorted",
+          "probe": "T0 Initialzustand",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "34 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.022
+        },
+        {
+          "cls": "e2_sorted",
+          "probe": "T2 Insert -> Eintritt",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "35 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.143
+        },
+        {
+          "cls": "e2_sorted",
+          "probe": "T3 Update Topic -> Austritt",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "34 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.143
+        },
+        {
+          "cls": "e2_sorted",
+          "probe": "T4 Update Topic -> Wiedereintritt",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "35 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.144
+        },
+        {
+          "cls": "e2_sorted",
+          "probe": "T5 Delete -> Austritt",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "34 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.144
+        },
+        {
+          "cls": "e2_sorted",
+          "probe": "T7 Nichttreffer bleibt draussen",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "Fortschrittsbarriere 1000151 verarbeitet; gepflegter Zustand entspricht dem Orakel (35 Zeilen entsprechen dem Referenzergebnis)",
+          "latency_s": 0.144
+        }
+      ],
+      "state_proofs_passed": 0,
+      "median_converge_s": 0.144
+    },
+    "e3_limit": {
+      "label": "Sorted Query + Limit",
+      "verdict": "supported",
+      "probes": [
+        {
+          "cls": "e3_limit",
+          "probe": "T0 Initialzustand",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "10 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.021
+        },
+        {
+          "cls": "e3_limit",
+          "probe": "T1 Unbekannter Rang rueckt nach",
+          "verdict": "pass",
+          "state_proof": true,
+          "detail": "geloescht=990001, nachgerueckt=[690001]; 10 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.142
+        },
+        {
+          "cls": "e3_limit",
+          "probe": "T2 Insert -> Eintritt",
+          "verdict": "pass",
+          "state_proof": true,
+          "detail": "10 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.142
+        },
+        {
+          "cls": "e3_limit",
+          "probe": "T3 Update Topic -> Austritt",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "10 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.143
+        },
+        {
+          "cls": "e3_limit",
+          "probe": "T4 Update Topic -> Wiedereintritt",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "10 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.021
+        },
+        {
+          "cls": "e3_limit",
+          "probe": "T5 Delete -> Austritt",
+          "verdict": "pass",
+          "state_proof": true,
+          "detail": "10 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.021
+        },
+        {
+          "cls": "e3_limit",
+          "probe": "T7 Nichttreffer bleibt draussen",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "Fortschrittsbarriere 1000154 verarbeitet; gepflegter Zustand entspricht dem Orakel (10 Zeilen entsprechen dem Referenzergebnis)",
+          "latency_s": 0.142
+        },
+        {
+          "cls": "e3_limit",
+          "probe": "T8 Alte Zeile betritt Fenster nicht",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "Fortschrittsbarriere 1000156 verarbeitet; gepflegter Zustand entspricht dem Orakel (10 Zeilen entsprechen dem Referenzergebnis)",
+          "latency_s": 0.143
+        }
+      ],
+      "state_proofs_passed": 3,
+      "median_converge_s": 0.142
+    },
+    "e4_offset": {
+      "label": "Sorted Query + Limit + Offset",
+      "verdict": "not_expressible",
+      "probes": [
+        {
+          "cls": "e4_offset",
+          "probe": "T0 Formulierbarkeit",
+          "verdict": "na",
+          "state_proof": false,
+          "detail": "Registrierungsversuch ergab: nicht formulierbar: OFFSET: ZQL query object has no offset() method in this installed version",
+          "latency_s": null
+        }
+      ],
+      "state_proofs_passed": 0,
+      "median_converge_s": null
+    },
+    "e5_join": {
+      "label": "Join/Relation (messages -> users)",
+      "verdict": "supported",
+      "probes": [
+        {
+          "cls": "e5_join",
+          "probe": "T0 Initialzustand",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "10 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.021
+        },
+        {
+          "cls": "e5_join",
+          "probe": "T1 Unbekannter Rang rueckt nach",
+          "verdict": "pass",
+          "state_proof": true,
+          "detail": "geloescht=990001, nachgerueckt=[690001]; 10 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.142
+        },
+        {
+          "cls": "e5_join",
+          "probe": "T2 Insert -> Eintritt",
+          "verdict": "pass",
+          "state_proof": true,
+          "detail": "10 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.021
+        },
+        {
+          "cls": "e5_join",
+          "probe": "T3 Update Topic -> Austritt",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "10 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.021
+        },
+        {
+          "cls": "e5_join",
+          "probe": "T4 Update Topic -> Wiedereintritt",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "10 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.021
+        },
+        {
+          "cls": "e5_join",
+          "probe": "T5 Delete -> Austritt",
+          "verdict": "pass",
+          "state_proof": true,
+          "detail": "10 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.142
+        },
+        {
+          "cls": "e5_join",
+          "probe": "T6 Update der Join-Gegenseite",
+          "verdict": "pass",
+          "state_proof": true,
+          "detail": "10 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.021
+        },
+        {
+          "cls": "e5_join",
+          "probe": "T7 Nichttreffer bleibt draussen",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "Fortschrittsbarriere 1000159 verarbeitet; gepflegter Zustand entspricht dem Orakel (10 Zeilen entsprechen dem Referenzergebnis)",
+          "latency_s": 0.022
+        },
+        {
+          "cls": "e5_join",
+          "probe": "T8 Alte Zeile betritt Fenster nicht",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "Fortschrittsbarriere 1000161 verarbeitet; gepflegter Zustand entspricht dem Orakel (10 Zeilen entsprechen dem Referenzergebnis)",
+          "latency_s": 0.021
+        }
+      ],
+      "state_proofs_passed": 4,
+      "median_converge_s": 0.021
+    },
+    "e6_count": {
+      "label": "Aggregation COUNT",
+      "verdict": "not_expressible",
+      "probes": [
+        {
+          "cls": "e6_count",
+          "probe": "T0 Formulierbarkeit",
+          "verdict": "na",
+          "state_proof": false,
+          "detail": "Registrierungsversuch ergab: nicht formulierbar: COUNT: ZQL query object has no count() method in this installed version",
+          "latency_s": null
+        }
+      ],
+      "state_proofs_passed": 0,
+      "median_converge_s": null
+    },
+    "e7_max": {
+      "label": "Aggregation MAX",
+      "verdict": "not_expressible",
+      "probes": [
+        {
+          "cls": "e7_max",
+          "probe": "T0 Formulierbarkeit",
+          "verdict": "na",
+          "state_proof": false,
+          "detail": "Registrierungsversuch ergab: nicht formulierbar: MAX: ZQL query object has no max() method in this installed version",
+          "latency_s": null
+        }
+      ],
+      "state_proofs_passed": 0,
+      "median_converge_s": null
+    },
+    "e8_text": {
+      "label": "Substring-Filter (ILIKE)",
+      "verdict": "supported",
+      "probes": [
+        {
+          "cls": "e8_text",
+          "probe": "T0 Initialzustand",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "10 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.022
+        },
+        {
+          "cls": "e8_text",
+          "probe": "T1 Unbekannter Rang rueckt nach",
+          "verdict": "pass",
+          "state_proof": true,
+          "detail": "geloescht=990001, nachgerueckt=[390001]; 10 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.021
+        },
+        {
+          "cls": "e8_text",
+          "probe": "T2 Insert -> Eintritt",
+          "verdict": "pass",
+          "state_proof": true,
+          "detail": "10 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.021
+        },
+        {
+          "cls": "e8_text",
+          "probe": "T3 Update Text -> Austritt",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "10 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.022
+        },
+        {
+          "cls": "e8_text",
+          "probe": "T4 Update Text -> Wiedereintritt",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "10 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.021
+        },
+        {
+          "cls": "e8_text",
+          "probe": "T5 Delete -> Austritt",
+          "verdict": "pass",
+          "state_proof": true,
+          "detail": "10 Zeilen entsprechen dem Referenzergebnis",
+          "latency_s": 0.022
+        },
+        {
+          "cls": "e8_text",
+          "probe": "T7 Nichttreffer bleibt draussen",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "Fortschrittsbarriere 1000164 verarbeitet; gepflegter Zustand entspricht dem Orakel (10 Zeilen entsprechen dem Referenzergebnis)",
+          "latency_s": 0.021
+        },
+        {
+          "cls": "e8_text",
+          "probe": "T8 Alte Zeile betritt Fenster nicht",
+          "verdict": "pass",
+          "state_proof": false,
+          "detail": "Fortschrittsbarriere 1000166 verarbeitet; gepflegter Zustand entspricht dem Orakel (10 Zeilen entsprechen dem Referenzergebnis)",
+          "latency_s": 0.142
+        }
+      ],
+      "state_proofs_passed": 3,
+      "median_converge_s": 0.022
+    }
+  },
+  "capability_method": "runtime_registration_probe_against_installed_zero",
+  "capability_marker": "__NOT_EXPRESSIBLE__:"
+}
